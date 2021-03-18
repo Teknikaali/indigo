@@ -6,7 +6,7 @@ bio: Ohjelmistokehittäjä suorittamassa tehtävää 🦊
 title: kettunen.dev
 tagline: Ohjelmointia ammattitaidolla
 description: Hei, olen Anssi Kettunen - innokas devaaja!
-logo: assets/images/keeb-refresh.jpg
+image: assets/images/keeb-refresh.jpg
 locale: fi_FI
 
 # if it's an external image, update below for true
