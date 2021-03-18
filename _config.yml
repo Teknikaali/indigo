@@ -1,15 +1,18 @@
 # main text of home
 name: Anssi Kettunen
-bio: Increasing the quality of .NET projects by writing testable code and fixing quirky bugs
+bio: Ohjelmistokehittäjä suorittamassa tehtävää 🦊
 
-# twitter summary info
-description: Hi, I'm Anssi Kettunen - a professional software seveloper and an avid gamer.
+# OpenGraph
+title: kettunen.dev
+tagline: Ohjelmointia ammattitaidolla
+description: Hei, olen Anssi Kettunen - innokas devaaja!
+logo: assets/images/keeb-refresh.jpg
+locale: fi_FI
 
 # if it's an external image, update below for true
 # better with square images
 external-image: false
 picture: assets/images/profile.jpg
-logo: assets/images/keeb-refresh.jpg # OpenGraph logo
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
@@ -56,16 +59,9 @@ github: Teknikaali
 authors:
   anssikettunen:
     name: Anssi Kettunen
-    bio: Increasing the quality of .NET projects by writing testable code and fixing quirky bugs
+    bio: Ohjelmistokehittäjä suorittamassa tehtävää 🦊
     external-image: false
     picture: assets/images/profile.jpg
-    # twitter: johndoe
-  # jamesfoster:
-    # name: James Foster
-    # bio: A Man who develops software with coffee
-    # external-image: false
-    # picture: assets/images/james.jpg
-    # twitter: jamesfoster
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
