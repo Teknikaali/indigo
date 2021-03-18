@@ -6,7 +6,6 @@ bio: Ohjelmistokehittäjä suorittamassa tehtävää 🦊
 title: kettunen.dev
 tagline: Ohjelmointia ammattitaidolla
 description: Hei, olen Anssi Kettunen - innokas devaaja!
-image: assets/images/keeb-refresh.jpg
 locale: fi_FI
 
 # if it's an external image, update below for true
@@ -110,6 +109,8 @@ defaults:
       # setting all post to not hidden by default,
       # can be overridden in the front matter for a specific post
       hidden: false
+      # OpenGraph default image
+      image: assets/images/keeb-refresh.jpg
 
 plugins:
   - jekyll-seo-tag
