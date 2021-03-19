@@ -1,19 +1,17 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus"
+title: "Tehdään Windows-työpöytäsovellus - Sovelluksen runko"
 layout: post
 date: 2021-03-20 18:00
 headerImage: false
 tag:
 - WPF
-- Opas
-star: true
 category: blog
-author: Anssi Kettunen
+author: anssikettunen
 description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
 ---
 
-## 4 - Sovelluksen runko
+## Sovelluksen runko
 
 Visual Studion käynnistyttyä sinua tervehtii ikkuna, jolla voit valita sovelluksen projektille tyypin. Luodaan uusi `WPF(.NET)`-työpöytäsovellus. Annetaan projektille nimeksi _Sukunimi.BMICalculator.WPFClient_ ja solutionille vastaavasti _Sukunimi.BMICalculator_ (esim. _Kettunen.BMICalculator_).
 
@@ -82,11 +80,9 @@ Annetaan tilaa vielä hieman perinteiden kunnioittamiselle ja lämmitellään ko
 `MainWindow.xaml:`
 
 ```diff
-        ...
     <Grid>
 +        <TextBlock Text="Hello, World!" />
     </Grid>
-...
 ```
 
 Nyt olet valmis ihailemaan uutta silmiä hivelevää sovellustasi. Käännetään ja käynnistetään sovellus.
@@ -100,9 +96,7 @@ ps. Voit poistaa lisäämämme väliaikaisen `TextBlock`-elementin tässä vaihe
 `MainWindow.xaml:`
 
 ```diff
-        ...
     <Grid>
 -        <TextBlock Text="Hello, World!" />
     </Grid>
-...
 ```

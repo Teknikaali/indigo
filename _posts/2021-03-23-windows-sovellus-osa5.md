@@ -1,15 +1,13 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus"
+title: "Tehdään Windows-työpöytäsovellus - Asettelu"
 layout: post
 date: 2021-03-23 18:00
 headerImage: false
 tag:
 - WPF
-- Opas
-star: true
 category: blog
-author: Anssi Kettunen
+author: anssikettunen
 description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
 ---
 

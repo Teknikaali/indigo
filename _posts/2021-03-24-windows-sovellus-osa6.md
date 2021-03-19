@@ -1,15 +1,13 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus"
+title: "Tehdään Windows-työpöytäsovellus - Tulosten näyttäminen"
 layout: post
 date: 2021-03-24 18:00
 headerImage: false
 tag:
 - WPF
-- Opas
-star: true
 category: blog
-author: Anssi Kettunen
+author: anssikettunen
 description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
 ---
 
@@ -32,18 +30,15 @@ Aloitetaan ongelman ratkaiseminen lisäämällä uusi rivi laskentapainikkeelle 
 `MainWindow.xaml:`
 
 ```diff
-...
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
 +            <RowDefinition />
         </Grid.RowDefinitions>
-...
 ```
 
 ```diff
-...
             <TextBox Grid.Row="1"
                      Background="Cornsilk"
                      Foreground="Chocolate" />
@@ -51,7 +46,6 @@ Aloitetaan ongelman ratkaiseminen lisäämällä uusi rivi laskentapainikkeelle 
 
 +        <Button Grid.Row="2"
 +                Content="Calculate" />
-...
 ```
 
 Ohjelma on nyt valmis ja voit taputtaa itseäsi selk.. hetkinen seis! Eikö vieläkään? Ei aivan vielä.
@@ -62,11 +56,9 @@ Emme ole kertoneet ohjelmalle vielä ollenkaan, että mitä painikkeen painamise
 
 `MainWindow.xaml:`
 ```diff
-...
         <Button Grid.Row="2"
 +                Click="Button_Click"
                 Content="Calculate" />
-...
 ```
 
 Käy kurkkaamassa taustatiedostoa `MainWindow.xaml.cs`. Sinne on tapahtumakäsittelijän lisäyksen yhteydessä lisätty automaattisesti seuraava funktio:

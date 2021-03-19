@@ -1,19 +1,16 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus"
+title: "Tehdään Windows-työpöytäsovellus - Alkupalat"
 layout: post
 date: 2021-03-19 18:00
 headerImage: false
 tag:
 - WPF
-- Opas
 star: true
 category: blog
-author: Anssi Kettunen
+author: anssikettunen
 description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
 ---
-
-## 1 - Alkupalat
 
 Jos haluat pienen maistiaisen Windows-työpöytäsovellusten luonnin maailmasta C#:lla ja WPF:llä, on tämä erinomainen mahdollisuus juuri sinulle!
 
@@ -53,7 +50,7 @@ Eiköhän aloiteta. Onnea matkaan! 👍
 
 ---
 
-## 2 - Määrittely
+## Määrittely
 
 Ensimmäisenä pitää määritellä mitä haluamme sovelluksen pääpiirteittäin tekevän. 
 
@@ -65,7 +62,7 @@ Sovellus voisi vaikkapa antaa vastauksen kysymykseen "Mikä on painoindeksi anne
 
 Näitä määrittelyjä voidaan myös tarkentaa tai laajentaa myöhemmin, kun opimme sovelluksesta ja tarpeistamme enemmän. Ei oteta liian suurta haukkausta heti alkuunsa.
 
-## 3 - Esivaatimukset
+## Esivaatimukset
 
 * Lataa ja asenna [Visual Studio 2019 (Community)](https://visualstudio.microsoft.com/downloads/)
     * Varmista asennuksen `Workloads`-kohdassa, että `.NET desktop development` on valittuna

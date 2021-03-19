@@ -1,13 +1,11 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus"
+title: "Tehdään Windows-työpöytäsovellus - Värit"
 layout: post
 date: 2021-03-22 18:00
 headerImage: false
 tag:
 - WPF
-- Opas
-star: true
 category: blog
 author: Anssi Kettunen
 description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
@@ -43,7 +41,6 @@ Aloitetaan kahden uuden rivin määrittely lisäämällä ruudukon `Grid.RowDefi
 `MainWindow.xaml:`
 
 ```diff
-...
     <Grid>
 +        <Grid.RowDefinitions>
 +            <RowDefinition />
@@ -55,7 +52,6 @@ Aloitetaan kahden uuden rivin määrittely lisäämällä ruudukon `Grid.RowDefi
                  Background="Cornsilk"
                  Foreground="Chocolate" />
     </Grid>
-...
 ```
 
 Nyt kun suoritat ohjelman uudelleen, niin et näe mitään muutoksia edelliseen. Miksi?
@@ -71,7 +67,6 @@ Ratkaisuna voimme määrittää erikseen millä rivillä ja sarakkeella haluamme
 `MainWindow.xaml:`
 
 ```diff
-...
         </Grid.RowDefinitions>
         <TextBox Background="MintCream"
                  Foreground="DarkSalmon" />
@@ -80,7 +75,6 @@ Ratkaisuna voimme määrittää erikseen millä rivillä ja sarakkeella haluamme
                  Background="Cornsilk"
                  Foreground="Chocolate" />
     </Grid>
-...
 ```
 
 Nyt laatikot näkyvät nätisti päällekkäin, mutta meillä on jälleen uusi ongelma ratkaistavana:

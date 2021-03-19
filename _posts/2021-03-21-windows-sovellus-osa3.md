@@ -1,19 +1,17 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus"
+title: "Tehdään Windows-työpöytäsovellus - Käyttöliittymän toteutus"
 layout: post
 date: 2021-03-21 18:00
 headerImage: false
 tag:
 - WPF
-- Opas
-star: true
 category: blog
-author: Anssi Kettunen
+author: anssikettunen
 description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
 ---
 
-## 5 - Käyttöliittymän toteutus
+## Käyttöliittymän toteutus
 
 Keskitytään ensiksi saamaan ohjelman toiminnallisuudet valmiiksi ja sitten voimme hienosäätää ulkoasua selkeämmäksi. Alussa ohjelma tulee näyttämään hyvin alkukantaiselta, mutta suljetaan siltä silmämme ja keskitytään saamaan jotain oikeasti toimivaa aikaiseksi ensiksi. Tyylitellään käyttöliittymästä täysin juhlakelpoinen tapaus joskus myöhemmin.. 😉
 
@@ -24,20 +22,18 @@ Vaihdetaan aivan ensimmäiseksi sovelluksen otsikko `MainWindow` parempaan. Pä�
 `MainWindow.xaml:`
 
 ```diff
-    ...
     mc:Ignorable="d"
 -    Title="MainWindow" Height="450" Width="800">
 +    Title="BMI Calculator" Height="450" Width="800">
     <Grid>
     
     </Grid>
-...
 ```
 
 Attribuutit voidaan asetella myös omille riveilleen tähän tapaan rikkomatta syntaksia:
+
 ```xml
-<Window ...
-        Title="BMI Calculator"
+<Window Title="BMI Calculator"
         Width="800"
         Height="450">
 ```
@@ -60,13 +56,11 @@ Intensiivinen sovelluksen tuijottaminen ei tuo lukemia ruudulle, joten tehdään
 `MainWindow.xaml:`
 
 ```diff
-        ...
         Title="BMI Calculator" Height="450" Width="800">
     <Grid>
 +        <TextBox />
 +        <TextBox />
     </Grid>
-...
 ```
 
 Käynnistä ohjelma ja ihaile loistavaa tuotost.. hetkinen. Vain toinen syötekentistä on näkyvissä ja sekin on koko ikkunan kokoinen! On aika ratkaista seuraava ongelmamme.. 🕳🐇
