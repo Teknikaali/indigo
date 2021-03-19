@@ -12,6 +12,8 @@ author: anssikettunen
 description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
 ---
 
+## Alkupalat
+
 Jos haluat pienen maistiaisen Windows-työpöytäsovellusten luonnin maailmasta C#:lla ja WPF:llä, on tämä erinomainen mahdollisuus juuri sinulle!
 
 Olen yrittänyt pitää asiat mahdollisimman yksinkertaisella tasolla ja selittää vastaan tulevat uudet konseptit korkealla tasolla paneutumatta niihin liian syvällisesti.
@@ -54,7 +56,9 @@ Eiköhän aloiteta. Onnea matkaan! 👍
 
 Ensimmäisenä pitää määritellä mitä haluamme sovelluksen pääpiirteittäin tekevän. 
 
-💡 Sovelluksia on helpompi luoda, kun on määritellyt selkeät tavoitteet ja rajat sovellukselle ja itselleen.
+{% include note.html
+    content="Sovelluksia on helpompi luoda, kun on määritellyt selkeät tavoitteet ja rajat sovellukselle ja itselleen."
+%}
 
 Sovellus voisi vaikkapa antaa vastauksen kysymykseen "Mikä on painoindeksi annetulle pituudelle ja painolle?". Yksinkertaisuuden nimissä luomme siis painoindeksin laskemiseen käytettävän sovelluksen seuraavin vaatimuksin:
 * Sovellus laskee antamieni tietojen pohjalta painoindeksin
