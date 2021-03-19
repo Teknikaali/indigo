@@ -22,7 +22,7 @@ resume-url: https://google.com/?q=my+resume
 url: https://teknikaali.github.io/landingpage
 # your url: https://USERNAME.github.io
 
-permalink: /:title/
+permalink: /blog/:title/
 
 # To enable google analytics, supply your token below
 # analytics-google: 'UA-MYANALYTICS'

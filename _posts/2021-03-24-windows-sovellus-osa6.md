@@ -1,6 +1,6 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus - Tulosten näyttäminen"
+title: "Tehdään Windows-työpöytäsovellus - Osa 6 - Tulosten näyttäminen"
 layout: post
 date: 2021-03-24 18:00
 headerImage: false

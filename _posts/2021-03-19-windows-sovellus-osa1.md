@@ -1,6 +1,6 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus - Alkupalat"
+title: "Tehdään Windows-työpöytäsovellus - Osa 1 - Alkupalat"
 layout: post
 date: 2021-03-19 18:00
 headerImage: false
@@ -56,9 +56,7 @@ Eiköhän aloiteta. Onnea matkaan! 👍
 
 Ensimmäisenä pitää määritellä mitä haluamme sovelluksen pääpiirteittäin tekevän. 
 
-{% include note.html
-    content="Sovelluksia on helpompi luoda, kun on määritellyt selkeät tavoitteet ja rajat sovellukselle ja itselleen."
-%}
+💡 Sovelluksia on helpompi luoda, kun on määritellyt selkeät tavoitteet ja rajat sovellukselle ja itselleen.
 
 Sovellus voisi vaikkapa antaa vastauksen kysymykseen "Mikä on painoindeksi annetulle pituudelle ja painolle?". Yksinkertaisuuden nimissä luomme siis painoindeksin laskemiseen käytettävän sovelluksen seuraavin vaatimuksin:
 * Sovellus laskee antamieni tietojen pohjalta painoindeksin

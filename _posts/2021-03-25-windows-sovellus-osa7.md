@@ -1,6 +1,6 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus - Laskenta"
+title: "Tehdään Windows-työpöytäsovellus - Osa 7 - Laskenta"
 layout: post
 date: 2021-03-25 18:00
 headerImage: false
