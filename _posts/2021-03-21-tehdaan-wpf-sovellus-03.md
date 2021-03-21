@@ -1,9 +1,8 @@
 ---
-hidden: true
 title: "Tehdään WPF-sovellus - 3 - Käyttöliittymän toteutus"
 image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
 layout: post
-date: 2021-03-20 12:00
+date: 2021-03-21 17:26
 tag:
 - WPF
 category: blog

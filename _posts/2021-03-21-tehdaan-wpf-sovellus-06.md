@@ -1,9 +1,8 @@
 ---
-hidden: true
 title: "Tehdään WPF-sovellus - 6 - Tulosten näyttäminen"
 image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
 layout: post
-date: 2021-03-20 12:45
+date: 2021-03-21 17:28
 tag:
 - WPF
 category: blog

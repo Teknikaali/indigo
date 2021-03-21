@@ -1,9 +1,8 @@
 ---
-hidden: true
 title: "Tehdään WPF-sovellus - 5 - Asettelu"
 image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
 layout: post
-date: 2021-03-20 12:40
+date: 2021-03-21 17:50
 tag:
 - WPF
 category: blog

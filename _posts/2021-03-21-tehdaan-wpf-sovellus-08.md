@@ -1,9 +1,8 @@
 ---
-hidden: true
 title: "Tehdään WPF-sovellus - 8 - Viimeistely"
 image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
 layout: post
-date: 2021-03-20 15:50
+date: 2021-03-21 17:30
 tag:
 - WPF
 category: blog
