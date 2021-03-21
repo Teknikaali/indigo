@@ -37,6 +37,8 @@ Attribuutit voidaan asetella myös omille riveilleen tähän tapaan rikkomatta s
         Height="450">
 ```
 
+{% include note.html content="Valitun elementin ominaisuuksia voi muokata myös `Properties`-ikkunan kautta (View -> Properties Window tai `F4`). " %}
+
 ---
 
 ## Ongelma: Pituuden ja painon syöttäminen
@@ -61,4 +63,9 @@ Intensiivinen sovelluksen tuijottaminen ei tunnu tuovan lukemia ruudulle, joten 
 
 Käynnistä ohjelma ja ihaile loistavaa tuotost.. hetkinen. Vain toinen syötekentistä on näkyvissä ja sekin on koko ikkunan kokoinen! On aika ratkaista seuraava ongelmamme.. 🕳🐇
 
+![Tekstinsyöttölaatikot lisätty][1]{: .center-image }
+<figcaption class="caption">Tekstinsyöttölaatikot lisätty</figcaption>
+
 Korjataan syötekenttien näkyvyys seuraavaksi.
+
+[1]: /assets/images/tehdaan-wpf-sovellus/03-01.png

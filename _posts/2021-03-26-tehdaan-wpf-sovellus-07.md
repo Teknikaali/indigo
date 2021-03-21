@@ -70,7 +70,7 @@ Tässä on mahdutettu paljon koodia samalle riville, joten pidä hatustasi kiinn
     * [Tässä](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier) lisää tietoa avainsanan `out` käytöstä
 * Rivin voisi kirjoittaa auki myös näin halutessaan:
     ```csharp
-    bool weight;
+    double weight;
     bool isWeightValid = double.TryParse(WeightInput.Text, out weight);
     ```
 
@@ -118,8 +118,13 @@ Paina `Calculate`-painiketta.
 
 Sain itse tulokseksi `0,0020902...`. Mutta mitäs ihmettä! Tämä ei missään määrin voi olla oikea tulos, sillä muutoinhan olisin _sairaalloisen alipainoinen_. Huhhuh.
 
+![Mitäköhän oikein teimme väärin..][1]{: .center-image }
+<figcaption class="caption">Mitäköhän oikein teimme väärin..</figcaption>
+
 {% include note.html content="Voit vilkaista miltä tulosten pitäisi oikeasti näyttää antamillasi arvoilla esim. [laskurini.fi](https://www.laskurini.fi/terveys/painoindeksilaskuri)-palvelun painoindeksilaskurilla." %}
 
 Onko sovelluksessamme _bugi_? Eikai sentään.. Voiko tämä olla?
 
-Korjataan pi(l)kkuvirhe seuraavaksi ja viimeistellään sovellus.
+Korjataan pi(l)kkuvirhe seuraavaksi.
+
+[1]: /assets/images/tehdaan-wpf-sovellus/07-01.png

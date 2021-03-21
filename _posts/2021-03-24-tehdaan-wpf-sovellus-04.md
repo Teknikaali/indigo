@@ -56,6 +56,9 @@ Aloitetaan kahden uuden rivin määrittely lisäämällä ruudukon `Grid.RowDefi
 
 Nyt kun suoritat ohjelman uudelleen, niin et näe mitään muutoksia edelliseen. Miksi?
 
+![Vain yksi tekstinsyöttölaatikko on näkyvissä][1]{: .center-image }
+<figcaption class="caption">Vain yksi tekstinsyöttölaatikko on näkyvissä</figcaption>
+
 Jätä ohjelma toistaiseksi vielä käyntiin ja tehdään tarvittavat korjaukset hyödyntämällä WPF:n hienoa `XAML Edit & Continue`-ominaisuutta. Tämän avulla voit muokata _käynnissä olevaa_ sovellusta reaaliaikaisesti. Muokkausten välissä ei ole siis tarvetta sulkea ja käynnistää sovellustamme aina uudelleen (tietyin rajoittein). Vau!
 
 Ongelmamme johtuu siitä, että oletusarvoisesti `Grid`:n sisälle lisätyt elementit sijoitetaan ruudukon ensimmäiselle riville (rivi "0"). Meillä on nyt siis kaksi elementtiä, jotka molemmat kilpailevat näkyvyydestään samalla rivillä.
@@ -79,4 +82,10 @@ Ratkaisuna voimme määrittää erikseen millä rivillä ja sarakkeella haluamme
 Nyt laatikot näkyvät nätisti päällekkäin, mutta meillä on jälleen uusi ongelma ratkaistavana:
 Mistä tiedämme kumpaan syötämme pituuden ja kumpaan painon?
 
+![Molemmat tekstinsyöttölaatikot ovat näkyvissä][2]{: .center-image }
+<figcaption class="caption">Molemmat tekstinsyöttölaatikot ovat näkyvissä</figcaption>
+
 Selkeytetään sovelluksen asettelua seuraavaksi.
+
+[1]: /assets/images/tehdaan-wpf-sovellus/04-01.png
+[2]: /assets/images/tehdaan-wpf-sovellus/04-02.png

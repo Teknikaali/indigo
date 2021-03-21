@@ -13,19 +13,23 @@ description: Opas kuinka tehdä Windows-työpöytäsovellus käyttäen WPF, XAML
 
 ## Luodaan uusi projekti
 
-Visual Studion käynnistyttyä sinua tervehtii ikkuna, jolla voit valita sovelluksen projektille tyypin. Luodaan uusi `WPF(.NET)`-työpöytäsovellus. Annetaan projektille nimeksi _Sukunimi.BMICalculator.WPFClient_ ja solutionille vastaavasti _Sukunimi.BMICalculator_ (esim. _Kettunen.BMICalculator_) tähän tapaan:
+Visual Studion käynnistyttyä sinua tervehtii ikkuna, jolla voit valita sovelluksen projektille tyypin. Olemme luomassa uutta `WPF(.NET)`-työpöytäsovellusta, joten tehdään näin:
 
 1. Valitse `Create a new project`
 2. Syötä hakukenttään "WPF"
-3. Valitse tuloksista `WPF App (.NET)` ja paina `Next`
-4. Anna uudelle projektille ja solutionille nimet:
+3. Valitse kieleksi `C#`
+4. Valitse tuloksista `WPF Application` ja paina `Next`
+5. Anna uudelle projektille ja solutionille nimet:
     * Project: Sukunimi.BMICalculator.WPFClient (esim. _Kettunen.BMICalculator.WPFClient_)
     * Solution: Sukunimi.BMICalculator
-5. Voit valita projektille haluamasi kansion, mutta oletusarvo tässä kohtaa on ihan ok
-6. Paina `Create`
+6. Voit valita projektille haluamasi kansion, mutta oletusarvo tässä kohtaa on ihan ok
+7. Paina `Next` ja valitse  `.NET 5.0 (Current)` Target Frameworkiksi
+7. Paina `Create`
+
+![Projektin tyypin valintaikkuna][1]
+<figcaption class="caption">Projektin tyypin valintaikkuna</figcaption>
 
 Kun projekti on luotu näet edessäsi XAML:lla kirjoitetun sovelluksen pääikkunan määrittelytiedoston `MainWindow.xaml`:
-
 
 ```xml
 <Window x:Class="Kettunen.BMICalculator.WpfClient.MainWindow"
@@ -44,6 +48,9 @@ Kun projekti on luotu näet edessäsi XAML:lla kirjoitetun sovelluksen pääikku
 <figcaption>MainWindow.xaml</figcaption>
 
 Tässä on paljon määrittelyä, mutta suurin osa on XAML:n "boilerplatea", eli koodia, jota voidaan käyttää useassa sovelluksessa tekemättä juurikaan suuria muutoksia.
+
+![Automaattisesti avautuvat tiedostot][2]{: .center-image }
+<figcaption class="caption">Automaattisesti avautuvat tiedostot</figcaption>
 
 Toinen automaattisesti omaan välilehteensä avautuva tiedosto on XAML-sivun taustakoodi (code-behind) `MainWindow.xaml.cs`:
 
@@ -93,6 +100,9 @@ Nyt olet valmis ihailemaan uutta silmiä hivelevää sovellustasi. Käännetää
 
 * Valitse ylhäältä Debug-valikosta `Start Debugging`, tai paina `F5` näppäimistöltä 
 
+![Hello, World!][3]{: .center-image }
+<figcaption class="caption">Hello, World!</figcaption>
+
 Hieno homma ja aivan mieletöntä! Ensimmäinen sovelluksesi on valmi.. hetkinen. Tämä on vasta sovelluksen runko. Sulje ohjelma vielä toistaiseksi. Nyt on aika pistää kädet saveen!
 
 ps. Voit poistaa lisäämämme väliaikaisen `TextBlock`-elementin tässä vaiheessa.
@@ -106,3 +116,7 @@ ps. Voit poistaa lisäämämme väliaikaisen `TextBlock`-elementin tässä vaihe
 <figcaption>MainWindow.xaml</figcaption>
 
 Aloitetaan varsinaisen sovelluksen käyttöliittymän tekeminen seuraavaksi.
+
+[1]: /assets/images/tehdaan-wpf-sovellus/02-01.png
+[2]: /assets/images/tehdaan-wpf-sovellus/02-02.png
+[3]: /assets/images/tehdaan-wpf-sovellus/02-03.png

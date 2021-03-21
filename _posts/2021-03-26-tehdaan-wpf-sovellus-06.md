@@ -47,6 +47,9 @@ Aloitetaan ongelman ratkaiseminen lisäämällä uusi rivi laskentapainikkeelle 
 ```
 <figcaption>MainWindow.xaml</figcaption>
 
+![Laskentapainikke lisätty][1]{: .center-image }
+<figcaption class="caption">Laskentapainike lisätty</figcaption>
+
 Ohjelma on nyt valmis ja voit taputtaa itseäsi selk.. hetkinen seis! Eikö vieläkään? Ei aivan vielä.
 
 Emme ole kertoneet ohjelmalle vielä ollenkaan, että mitä painikkeen painamisesta pitäisi tapahtua!
@@ -78,13 +81,20 @@ Tämä funktio suoritetaan, kun painiketta painetaan.
 
 {% include note.html content="WPF:ssä on suositeltu tapa tehdä painikkeen painamiseen reagointi komentojen avulla hyödyntäen hieman erilaista lähestymistapaa toiminnallisuuden sitomiseksi käyttöliittymään, mutta edetään vielä yksinkertaisuus edellä. Tarkoitus ei ole kuitenkaan tukahduttaa itseämme informaatiähkyllä!" %}
 
-Laitetaan debuggaamiselle pysäytyspiste ensimmäisen aaltosulkeen kohdalle klikkaamalla tiedoston vasemmassa reunassa olevaa saraketta. Punainen täplä (🔴 breakpoint) kertoo, että debugatessamme tähän kohtaan pysähdytään. 
+Laitetaan debuggaamiselle pysäytyspiste ensimmäisen aaltosulkeen kohdalle klikkaamalla tiedoston vasemmassa reunassa olevaa saraketta. Punainen täplä (🔴 breakpoint) kertoo, että debugatessamme tähän kohtaan pysähdytään.
+
 * Suoritetaan ohjelma painamalla `F5`
 * Klikataan hienoa laskentapainikettamme
 * Ohjelman suoritus pysähtyy code-behind-tiedostossa valitsemaamme kohtaan
     * `F5` jatkaa ohjelman suoritusta ja `F10`:llä voit astua yhden koodirivin eteenpäin. Voit poistaa breakpointin klikkaamalla sitä.
 * Lopeta lopuksi ohjelman suoritus (`Shift`+`F5`, `Debug->Stop Debugging` tai VS:n yläreunasta 🟥-painike)
 
+![Painiketta on painettu ja ohjelman suoritus on pysäytetty][2]{: .center-image }
+<figcaption class="caption">Painiketta on painettu ja ohjelman suoritus on pysäytetty</figcaption>
+
 Nyt voimme olla varmoja, että käyttöliittymämme toimii ainakin tähän asti oikein. Painike ei vieläkään kyllä tee yhtikäs mitään mielenkiintoista, joten on aika korjata asia!
 
 Seuraavaksi laitetaan painike tekemään töitä.
+
+[1]: /assets/images/tehdaan-wpf-sovellus/06-01.png
+[2]: /assets/images/tehdaan-wpf-sovellus/06-02.png

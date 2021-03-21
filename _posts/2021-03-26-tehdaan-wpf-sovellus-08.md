@@ -42,6 +42,8 @@ Seuraavaksi meidän tulee korjata yksikkömuunnos taustakoodin puolelta muuntama
 ```
 <figcaption>MainWindow.xaml.cs</figcaption>
 
+{% include note.html content="Et voi muokata taustakoodia ohjelman ollessa käynnissä, ellet pysäytä ohjelman suoritusta breakpointilla ennen kohtaa, jota ajattelit muokata." %}
+
 {% include note.html content="`height = height / 100` voi kirjoittaa myös muotoon `height /= 100` ([Compound assignment](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/assignment-operator#compound-assignment))" %}
 
 Nyt ohjelma antaa tulokseksi lähes hyväksyttävän lukeman `2,0902385...`. Meidän ei kuitenkaan tarvitse tietää lukemaa aivan näin tarkasti, joten tiputetaan vielä muutama desimaali pois:
@@ -55,15 +57,22 @@ Nyt ohjelma antaa tulokseksi lähes hyväksyttävän lukeman `2,0902385...`. Mei
 
 {% include note.html content="`N1` rajaa desimaalit sopivasti yhteen. [Tässä](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings#standard-format-specifiers) eri muotoilumäärittelyt listattuna (Standard format specifiers)." %}
 
+![Valmis sovellus][1]{: .center-image }
+<figcaption class="caption">Valmis sovellus</figcaption>
+
 ---
 
 ## Valmista tuli!
 
-Voit tässä vaiheessa taputtaa itseäsi olalle ja todeta: "Hieno homma, onnistuin!"
+Voit vihdoinkin taputtaa itseäsi olalle ja todeta: "Hieno homma, onnistuin!"
 
 Sovellus tekee nyt kaiken mitä olimme alussa määritelleet, eli:
 * Laskee annettujen tietojen pohjalta painoindeksin
 * Tulosta voi tarkastella
+
+Olet nyt oppinut minkälaista työpöytäsovelluksen kehittäminen WPF:llä voi olla yksinkertaisimmillaan.
+
+## Jatkokehitys
 
 Tekemisen ei tarvitse päättyä vielä tähän, sillä nyt meillä on käsissämme vasta juuri ja juuri toimiva sovellus.
 
@@ -78,3 +87,5 @@ Tässäpä pari kysymystä, joiden pohjalta voimme lähteä suunnittelemaan jatk
 * Eikös sovelluksen tulisi sisältää yksikkötestejä ettemme rikkoisi mitään vahingossa jatkokehittäessämme?
 
 Kysymyksiä on suhteellisen paljon, vaikka kyse onkin vain yhden toiminnallisuuden sovelluksesta. Huhhuh! Tässäpä riittää työmaata vielä seuraavillekin kerroille.
+
+[1]: /assets/images/tehdaan-wpf-sovellus/08-01.png

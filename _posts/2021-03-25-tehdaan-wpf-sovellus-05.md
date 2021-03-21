@@ -20,31 +20,35 @@ Lähdetään ratkaisemaan ongelmaa lisäämällä tekstit laatikoiden päälle j
 Huomioi erityisesti, että nyt molemmat `TextBox`-elementit ovat omien ruudukkojensa "1"-riveillä, koska uusi `TextBlock` sijoitetaan "0"-riville. Annetaan pituuden ja painon tekstit `TextBox`-elementin `Text`-attribuutille:
 
 ```diff
-        ...
++
 +        <Grid>
 +            <Grid.RowDefinitions>
 +                <RowDefinition />
 +                <RowDefinition />
 +            </Grid.RowDefinitions>
 +            <TextBlock Text="Weight" />
-            <TextBox Grid.Row="1"
-                     Background="MintCream"
+-            <TextBox Background="MintCream" 
++            <TextBox Grid.Row="1"
++                     Background="MintCream"
                      Foreground="DarkSalmon" />
 +        </Grid>
-
++
 +        <Grid Grid.Row="1">
 +            <Grid.RowDefinitions>
 +                <RowDefinition />
 +                <RowDefinition />
 +            </Grid.RowDefinitions>
 +            <TextBlock Text="Height" />
--            <TextBox Background="Cornsilk"
-+            <TextBox Grid.Row="1"
-+                     Background="Cornsilk"
+            <TextBox Grid.Row="1"
+                     Background="Cornsilk"
                      Foreground="Chocolate" />
 +        </Grid>
++
 ```
 <figcaption>MainWindow.xaml</figcaption>
+
+![Painon ja pituuden tekstit lisätty][1]{: .center-image }
+<figcaption class="caption">Painon ja pituuden tekstit lisätty</figcaption>
 
 Ohjelmamme käyttöliittymän koodin pitäisi näyttää nyt tältä kokonaisuudessaan:
 
@@ -108,4 +112,6 @@ Noin!
 
 Nyt voimme selkeästi syöttää haluamamme tiedot, mutta entäs miten saamme itse laskentatuloksen näkyviin?
 
-Tuodaan laskentatulokset näkyviin seuraavaksi.
+Tuodaanpa ne näkyviin seuraavaksi.
+
+[1]: /assets/images/tehdaan-wpf-sovellus/05-01.png
