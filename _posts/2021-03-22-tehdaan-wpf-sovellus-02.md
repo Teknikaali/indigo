@@ -1,17 +1,15 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus - 2 - Sovelluksen runko"
-image: assets/images/ketuttaako-header.jpg
+title: "Tehdään WPF-sovellus - 2 - Sovelluksen runko"
+image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
 layout: post
 date: 2021-03-20 11:00
 tag:
 - WPF
 category: blog
 author: anssikettunen
-description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
+description: Opas kuinka tehdä Windows-työpöytäsovellus käyttäen WPF, XAML ja C#.
 ---
-
-## Sovelluksen runko
 
 Visual Studion käynnistyttyä sinua tervehtii ikkuna, jolla voit valita sovelluksen projektille tyypin. Luodaan uusi `WPF(.NET)`-työpöytäsovellus. Annetaan projektille nimeksi _Sukunimi.BMICalculator.WPFClient_ ja solutionille vastaavasti _Sukunimi.BMICalculator_ (esim. _Kettunen.BMICalculator_) tähän tapaan:
 
@@ -25,6 +23,7 @@ Visual Studion käynnistyttyä sinua tervehtii ikkuna, jolla voit valita sovellu
 6. Paina `Create`
 
 Kun projekti on luotu näet edessäsi XAML:lla kirjoitetun sovelluksen pääikkunan määrittelytiedoston `MainWindow.xaml`:
+
 
 ```xml
 <Window x:Class="Kettunen.BMICalculator.WpfClient.MainWindow"
@@ -40,6 +39,7 @@ Kun projekti on luotu näet edessäsi XAML:lla kirjoitetun sovelluksen pääikku
     </Grid>
 </Window>
 ```
+<figcaption>MainWindow.xaml</figcaption>
 
 Tässä on paljon määrittelyä, mutta suurin osa on XAML:n "boilerplatea", eli koodia, jota voidaan käyttää useassa sovelluksessa tekemättä juurikaan suuria muutoksia.
 
@@ -60,6 +60,7 @@ namespace Kettunen.BMICalculator.WpfClient
     }
 }
 ```
+<figcaption>MainWindow.xaml.cs</figcaption>
 
 Taustatiedostoon voimme kirjoittaa näkymälle ominaisia toiminnallisuuksia, joita ei välttämättä XAML-syntaksilla saada toteutettua helposti. Periaatteessa tänne _ei olisi tarvetta_ kirjoittaa koskaan juuri mitään, mutta teemme poikkeuksen yksinkertaisuuden nimissä. Palaamme tähän tiedostoon myöhemmin, mutta keskitytään nyt aluksi XAML-määrittelytiedostoon `MainWindow.xaml`.
 
@@ -78,13 +79,13 @@ Taustatiedostoon voimme kirjoittaa näkymälle ominaisia toiminnallisuuksia, joi
 
 Annetaan tilaa vielä hieman perinteiden kunnioittamiselle ja lämmitellään koodinystyröitämme ennen itse sovelluksen luomista lisäämällä väliaikaisesti legendaarinen ["Hello, World!"-teksti](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) näkyville. Lisätään `TextBlock`-elementti:
 
-`MainWindow.xaml:`
 
 ```diff
     <Grid>
 +        <TextBlock Text="Hello, World!" />
     </Grid>
 ```
+<figcaption>MainWindow.xaml</figcaption>
 
 Nyt olet valmis ihailemaan uutta silmiä hivelevää sovellustasi. Käännetään ja käynnistetään sovellus.
 
@@ -94,12 +95,12 @@ Hieno homma ja aivan mieletöntä! Ensimmäinen sovelluksesi on valmi.. hetkinen
 
 ps. Voit poistaa lisäämämme väliaikaisen `TextBlock`-elementin tässä vaiheessa
 
-`MainWindow.xaml:`
 
 ```diff
     <Grid>
 -        <TextBlock Text="Hello, World!" />
     </Grid>
 ```
+<figcaption>MainWindow.xaml</figcaption>
 
 Aloitetaan varsinaisen sovelluksen käyttöliittymän tekeminen seuraavaksi.

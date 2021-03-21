@@ -1,7 +1,7 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus - 1 - Alkupalat"
-image: assets/images/ketuttaako-header.jpg
+title: "Tehdään WPF-sovellus - 1 - Alkupalat"
+image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
 layout: post
 date: 2021-03-19 18:00
 tag:
@@ -9,42 +9,34 @@ tag:
 star: true
 category: blog
 author: anssikettunen
-description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
+description: Opas kuinka tehdä Windows-työpöytäsovellus käyttäen WPF, XAML ja C#.
 ---
+
+![Otsikko ja kuva ketusta][1]
 
 Jos haluat pienen maistiaisen Windows-työpöytäsovellusten luonnin maailmasta C#:lla ja WPF:llä, on tämä erinomainen mahdollisuus juuri sinulle!
 
-Tässä luotua sovellusta voidaan käyttää hyvänä pohjana jatkokehitykselle myöhemmin. Tarkoitus on, että saisit tämän avulla tehtyä jotain valmista alusta loppuun!
+Tässä luotua sovellusta voidaan käyttää hyvänä pohjana jatkokehitykselle myöhemmin. Tarkoitus on, että saisit tämän avulla tehtyä jotain valmista alusta loppuun.
 
 Olen yrittänyt pitää asiat mahdollisimman yksinkertaisella tasolla ja selittää vastaan tulevat uudet konseptit korkealla tasolla paneutumatta niihin liian syvällisesti.
 
 Teen sen olettamuksen, että olet ehkä kokeillut jo jotain ohjelmointiin liittyvää ja hallitset tietokoneen käytön.
 
-Koodimuutokset on merkattu näin:
+## WPF - Windows Presentation Framework
+
+Toteutamme sovelluksemme [WPF](https://docs.microsoft.com/en-us/visualstudio/designers/getting-started-with-wpf)-käyttöliittymän [XAML](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/xaml-overview) -kielellä ja herätämme toiminnallisuuden henkiin [C#](https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/):lla.
+
+Opimme kaikista näistä kolmesta enemmän vähitellen mitä pidemmälle pääsemme itse tekemisen kanssa.
+
+Teemme tämän esimerkkisovelluksen UI edellä, eli keskitymme ensin käyttöliittymän muovaamiseen ja vasta sitten toiminnallisuuden toteuttamiseen. WPF:llä pystyy helposti toteuttamaan ohjelman toiminnallisuuden erillään käyttöliittymästä. Tämä mahdollistaa vaikkapa sen, että yksi henkilö voi keskittyä leipomaan hienoa ulkoasua sovellukselle ja toinen taas tekemään itse toiminnallista osuutta.
+
+Olen esittänyt koodiin tehtävät muutokset `git diff`-tyylisesti näin:
 
 ```diff
 Tätä riviä ei muokata.
 - Tätä riviä muokataan.
 + Näin riviä on muokattu.
 ```
-
-Ennen muokkausta:
-```
-Tätä riviä ei muokata.
-Tämä riviä muokataan.
-```
-
-Muokkauksen jälkeen:
-```
-Tätä riviä ei muokata.
-Näin riviä on muokattu.
-```
-
-## WPF - Windows Presentation Framework
-
-Toteutamme sovelluksemme WPF-käyttöliittymän [XAML](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/xaml-overview) -kielellä ja pääsemme käyttämään myös C#:ia.
-
-Teemme tämän esimerkkisovelluksen UI edellä, eli keskitymme ensin käyttöliittymän muovaamiseen ja sitten vasta toiminnallisuuden toteuttamiseen. WPF:llä pystyy helposti toteuttamaan ohjelman toiminnallisuuden erillään käyttöliittymästä. Tämä mahdollistaa vaikkapa sen, että yksi henkilö voi keskittyä leipomaan hienoa ulkoasua sovellukselle ja toinen taas tekemään itse toiminnallista osuutta.
 
 Eiköhän aloiteta. Onnea matkaan! 👍
 
@@ -56,7 +48,9 @@ Ensimmäisenä määrittelemme mitä haluamme sovelluksen pääpiirteittäin tek
 
 {% include note.html content="Sovelluksia on mielekkäämpää luoda, kun on ensin määritellyt selkeät tavoitteet ja rajat sovellukselle ja itselleen." %}
 
-Sovellus voisi vaikkapa antaa vastauksen kysymykseen: "Mikä on painoindeksi annetulle pituudelle ja painolle?"
+Sovellus voisi vaikkapa antaa vastauksen kysymykseen:
+- "Mikä on painoindeksi annetulle pituudelle ja painolle?"
+
 Yksinkertaisuuden nimissä luomme siis painoindeksin laskemiseen käytettävän sovelluksen seuraavin vaatimuksin:
 * Sovellus laskee antamieni tietojen pohjalta painoindeksin
 * Voin tarkastella tuloksia
@@ -77,3 +71,5 @@ Näitä määrittelyjä voidaan myös tarkentaa tai laajentaa myöhemmin, kun op
 Muotoillaan seuraavaksi sovelluksen runko valmiiksi.
 
 Pääset siirtymään vaiheiden välillä alapuolella olevista linkeistä 👇
+
+[1]: /assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg

@@ -1,14 +1,14 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus - 8 - Viimeistely"
-image: assets/images/ketuttaako-header.jpg
+title: "Tehdään WPF-sovellus - 8 - Viimeistely"
+image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
 layout: post
 date: 2021-03-20 15:50
 tag:
 - WPF
 category: blog
 author: anssikettunen
-description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
+description: Opas kuinka tehdä Windows-työpöytäsovellus käyttäen WPF, XAML ja C#.
 ---
 
 ## Ongelma: Laskettu tulos ei näytä oikealta
@@ -23,8 +23,6 @@ A-haa! Pituus on annettu kaavassa metreinä, joten periaatteessa mitään ongelm
 
 Lisätään ensin tekstilaatikoihin yksiköt esille, jotta jatkossa ei jäisi epäselväksi, että missä muodossa arvot pitäisi syöttää.
 
-`MainWindow.xaml:`
-
 ```diff
 -<TextBlock Text="Weight" />
 +<TextBlock Text="Weight (kg)" />
@@ -34,15 +32,15 @@ Lisätään ensin tekstilaatikoihin yksiköt esille, jotta jatkossa ei jäisi ep
 -<TextBlock Text="Height" />
 +<TextBlock Text="Height (cm)" />
 ```
+<figcaption>MainWindow.xaml</figcaption>
 
 Seuraavaksi meidän tulee korjata yksikkömuunnos taustakoodin puolelta muuntamalla metrit senttimetreiksi. Tehdään muunnos juuri ennen indeksin laskentaa:
-
-`MainWindow.xaml.cs:`
 
 ```diff
 +    height = height / 100;
     var bodyMassIndex = weight / Math.Pow(height, 2);
 ```
+<figcaption>MainWindow.xaml.cs</figcaption>
 
 {% include note.html content="`height = height / 100` voi kirjoittaa myös muotoon `height /= 100` ([Compound assignment](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/assignment-operator#compound-assignment))" %}
 

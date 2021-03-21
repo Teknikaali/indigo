@@ -1,14 +1,14 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus - 5 - Asettelu"
-image: assets/images/ketuttaako-header.jpg
+title: "Tehdään WPF-sovellus - 5 - Asettelu"
+image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
 layout: post
 date: 2021-03-20 12:40
 tag:
 - WPF
 category: blog
 author: anssikettunen
-description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
+description: Opas kuinka tehdä Windows-työpöytäsovellus käyttäen WPF, XAML ja C#.
 ---
 
 ## Ongelma: Tekstilaatikoita ei erota toisistaan
@@ -18,8 +18,6 @@ Tarvitsemme selkeän tavan ilmaista kumpaan laatikkoon pitää syöttää pituus
 Lähdetään ratkaisemaan ongelmaa lisäämällä tekstit laatikoiden päälle ja paketoimalla nämä uudet pituuden ja painon kokonaisuudet omiin `Grid`-elementteihinsä.
 
 Huomioi erityisesti, että nyt molemmat `TextBox`-elementit ovat omien ruudukkojensa "1"-riveillä, koska uusi `TextBlock` sijoitetaan "0"-riville. Annetaan pituuden ja painon tekstit `TextBox`-elementin `Text`-attribuutille:
-
-`MainWindow.xaml:`
 
 ```diff
         ...
@@ -46,10 +44,9 @@ Huomioi erityisesti, että nyt molemmat `TextBox`-elementit ovat omien ruudukkoj
                      Foreground="Chocolate" />
 +        </Grid>
 ```
+<figcaption>MainWindow.xaml</figcaption>
 
 Ohjelmamme käyttöliittymän koodin pitäisi näyttää nyt tältä kokonaisuudessaan:
-
-`MainWindow.xaml:`
 
 ```xml
 <Window x:Class="Kettunen.BMICalculator.WpfClient.MainWindow"
@@ -93,6 +90,7 @@ Ohjelmamme käyttöliittymän koodin pitäisi näyttää nyt tältä kokonaisuud
     </Grid>
 </Window>
 ```
+<figcaption>MainWindow.xaml</figcaption>
 
 {% include note_start.html content='Voit kommentoida XAML:ssa käyttämällä tagia `<!--` avaamaan kommentti ja `-->` sulkemaan se. Kommentteja on hyvä käyttää, jos haluat erityisesti selkeyttää jotain kohtaa, tai laittaa huomioita määrittelyn sekaan tarkentamaan asioita. Esimerkiksi jos edeltävä koodilistaus tuntuu liian sekavalta kaikkine ruudukkoineen, niin voit vapaasti lisätä kommentteja selkeyttämään mikä minkäkin elementin tehtävä on. 
 

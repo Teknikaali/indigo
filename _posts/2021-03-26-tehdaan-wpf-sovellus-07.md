@@ -1,17 +1,17 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus - 7 - Laskenta"
-image: assets/images/ketuttaako-header.jpg
+title: "Tehdään WPF-sovellus - 7 - Laskenta"
+image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
 layout: post
 date: 2021-03-20 15:00
 tag:
 - WPF
 category: blog
 author: anssikettunen
-description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
+description: Opas kuinka tehdä Windows-työpöytäsovellus käyttäen WPF, XAML ja C#.
 ---
 
-### Ongelma: Painiketta painaessa ei tapahdu mitään
+## Ongelma: Painiketta painaessa ei tapahdu mitään
 
 Haluaisimme kahden asian tapahtuvan, kun painiketta painetaan:
 1. Suoritetaan laskutoimitus
@@ -25,8 +25,6 @@ Aivan ensimmäiseksi tarvitsemme käsiimme pituuden ja painon arvot ennen kuin v
 * Nimeä ei välttämättä kannata antaa vain ulkoasuun vaikuttaville elementeille:
     * Esim. `<Grid>` ja `<Border>`' %}
 {% include note_end.html %}
-
-`MainWindow.xaml:`
 
 ```diff
             <TextBlock Text="Weight" />
@@ -45,6 +43,7 @@ Aivan ensimmäiseksi tarvitsemme käsiimme pituuden ja painon arvot ennen kuin v
                      Background="Cornsilk"
                      Foreground="Chocolate" />
 ```
+<figcaption>MainWindow.xaml</figcaption>
 
 Nyt voimme viitata elementteihin `WeightInput` ja `HeightInput` taustakoodin puolella ja hakea niiltä tarvitsemamme arvot.
 
@@ -54,8 +53,6 @@ Tässä kohtaa on hyvä huomata, että tekstilaatikkoon syötetty sisältö on n
 
 Poimitaan muunnetut syötteet omiin muuttujiinsa, jolloin meidän on helpompi käsitellä niitä:
 
-`MainWindow.xaml.cs:`
-
 ```diff
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -63,6 +60,7 @@ Poimitaan muunnetut syötteet omiin muuttujiinsa, jolloin meidän on helpompi k�
 +            var isHeightValid = double.TryParse(HeightInput.Text, out var height);
         }
 ```
+<figcaption>MainWindow.xaml.cs</figcaption>
 
 Tässä on mahdutettu paljon koodia samalle riville, joten pidä hatustasi kiinni niin avataan mitä riveillä oikeastaan tapahtuukaan:
 * `double.TryParse`-funktio _yrittää_ parsia tekstisyötteestä (`WeightInput.Text`) `double`-tyyppisen tuloksen.
@@ -78,8 +76,6 @@ Tässä on mahdutettu paljon koodia samalle riville, joten pidä hatustasi kiinn
 
 Jätämme vielä tässä vaiheessa virheenkäsittelyn erittäin yksinkertaiselle tasolle, jotta saisimme vain tulosta aikaiseksi. Suoritetaan laskutoimitus vain, jos molemmat pituus ja paino ovat ok:
 
-`MainWindow.xaml.cs:`
-
 ```diff
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -92,6 +88,7 @@ Jätämme vielä tässä vaiheessa virheenkäsittelyn erittäin yksinkertaiselle
 +            }
         }
 ```
+<figcaption>MainWindow.xaml.cs</figcaption>
 
 {% include note.html content="Mielenkiintoisena pointtina tästä käytetystä [kaavasta](https://fi.wikipedia.org/wiki/Painoindeksi#M%C3%A4%C3%A4ritelm%C3%A4) on ehdotettu [uutta muotoa](https://en.wikipedia.org/wiki/Body_mass_index#Proposed_New_BMI), joka ottaisi paremmin huomioon vääristymät lyhyiden ja pitkien henkilöiden kohdalla." %}
 
@@ -101,8 +98,6 @@ Jätämme vielä tässä vaiheessa virheenkäsittelyn erittäin yksinkertaiselle
 
 Tuloksen voimme tuoda näkyviin popup-viestilaatikolla:
 
-`MainWindow.xaml.cs:`
-
 ```diff
             if(isHeightValid && isWeightValid)
             {
@@ -111,6 +106,7 @@ Tuloksen voimme tuoda näkyviin popup-viestilaatikolla:
 +                MessageBox.Show(resultMessage);
             }
 ```
+<figcaption>MainWindow.xaml.cs</figcaption>
 
 {% include note.html content='Lisäämällä dollarimerkin ennen lainausmerkkejä voimme kätevästi syöttää arvot suoraan tekstin sisälle: `$"Teksti {arvo}"`. Lisää aiheesta: [$ - string interpolation](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated).' %}
 

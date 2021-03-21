@@ -12,14 +12,6 @@
         <div class="share">
             <!-- Note: Only use three share links if your site width is set to large -->
             <!-- If site width is set to normal, you may choose any two share links -->
-            <!-- <a
-                class="twitter"
-                href="https://twitter.com/intent/tweet?text={{ site.url }}{{ page.url }} - {{ page.title }} by @{{ site.authors[page.author].twitter }}"
-            >
-                <svg class="icon icon-twitter">
-                    <use xlink:href="#icon-twitter"></use></svg
-                ><span class="icon-twitter">Tweet</span>
-            </a> -->
 
             <a class="linkedin"
                 href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ site.url }}{{ page.url }}&amp;title={{ page.title }}&amp;summary={{ page.description }}&amp;source={{ site.url }}"
@@ -27,6 +19,13 @@
                 <svg class="icon icon-linkedin">
                     <use xlink:href="#icon-linkedin"></use>
                 </svg><span class="icon-linkedin">Share</span>
+            </a>
+
+            <a class="twitter"
+                href="https://twitter.com/intent/tweet?text={{ site.url }}{{ page.url }} - {{ page.title }} by @{{ site.authors[page.author].twitter }}">
+                <svg class="icon icon-twitter">
+                    <use xlink:href="#icon-twitter"></use>
+                </svg><span class="icon-twitter">Tweet</span>
             </a>
 
             <a class="facebook" href="javascript:void(0)"

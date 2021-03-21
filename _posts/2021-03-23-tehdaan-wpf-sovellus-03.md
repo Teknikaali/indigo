@@ -1,25 +1,21 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus - 3 - Käyttöliittymän toteutus"
-image: assets/images/ketuttaako-header.jpg
+title: "Tehdään WPF-sovellus - 3 - Käyttöliittymän toteutus"
+image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
 layout: post
 date: 2021-03-20 12:00
 tag:
 - WPF
 category: blog
 author: anssikettunen
-description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
+description: Opas kuinka tehdä Windows-työpöytäsovellus käyttäen WPF, XAML ja C#.
 ---
-
-## Käyttöliittymän toteutus
 
 Keskitytään ensiksi saamaan ohjelman toiminnallisuudet valmiiksi ja sitten voimme hienosäätää ulkoasua selkeämmäksi. Alussa ohjelma tulee näyttämään hyvin alkukantaiselta, mutta suljetaan siltä silmämme ja keskitytään saamaan jotain oikeasti toimivaa aikaiseksi ensiksi. Tyylitellään käyttöliittymästä täysin juhlakelpoinen tapaus joskus myöhemmin (™).
 
 Vaihdetaan aivan ensimmäiseksi sovelluksen otsikko `MainWindow` parempaan. Usein ohjelmointia harjoitetaan käyttäen englanninkielisiä avainsanoja, joten noudatetaan tätä ja nimetään sovelluksemme. Saanen esitellä: `BMI Calculator` 🎉
 
 * `<Window>`-elementin `Title`-attribuutin arvo määrittää pääikkunan otsikossa näytettävän tekstin:
-
-`MainWindow.xaml:`
 
 ```diff
     mc:Ignorable="d"
@@ -29,6 +25,7 @@ Vaihdetaan aivan ensimmäiseksi sovelluksen otsikko `MainWindow` parempaan. Usei
     
     </Grid>
 ```
+<figcaption>MainWindow.xaml</figcaption>
 
 Attribuutit voidaan asetella myös omille riveilleen tähän tapaan rikkomatta syntaksia:
 
@@ -53,8 +50,6 @@ Intensiivinen sovelluksen tuijottaminen ei tunnu tuovan lukemia ruudulle, joten 
 * `<TextBox>` on hyvä valinta tekstin syöttämiseen.
     * `<Label>` ja `<TextBlock>` ovat hyviä valintoja, kun tekstiä halutaan vain näyttää.
 
-`MainWindow.xaml:`
-
 ```diff
         Title="BMI Calculator" Height="450" Width="800">
     <Grid>
@@ -62,6 +57,7 @@ Intensiivinen sovelluksen tuijottaminen ei tunnu tuovan lukemia ruudulle, joten 
 +        <TextBox />
     </Grid>
 ```
+<figcaption>MainWindow.xaml</figcaption>
 
 Käynnistä ohjelma ja ihaile loistavaa tuotost.. hetkinen. Vain toinen syötekentistä on näkyvissä ja sekin on koko ikkunan kokoinen! On aika ratkaista seuraava ongelmamme.. 🕳🐇
 

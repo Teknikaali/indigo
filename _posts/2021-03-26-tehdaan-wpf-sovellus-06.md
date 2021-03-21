@@ -1,17 +1,17 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus - 6 - Tulosten näyttäminen"
-image: assets/images/ketuttaako-header.jpg
+title: "Tehdään WPF-sovellus - 6 - Tulosten näyttäminen"
+image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
 layout: post
 date: 2021-03-20 12:45
 tag:
 - WPF
 category: blog
 author: anssikettunen
-description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
+description: Opas kuinka tehdä Windows-työpöytäsovellus käyttäen WPF, XAML ja C#.
 ---
 
-### Ongelma: Tulosta ei näy
+## Ongelma: Tulosta ei näy
 
 Ohjelma on kyllä oikeastaan ihan täysin hyödytön ilman itse tulosten laskentaa. Onhan se ihan mukava syötellä arvoja näihin (vähintäänkin) komeisiin kenttiin, mutta pidemmän päälle homma voi käydä vähän tylsäksi..
 
@@ -26,8 +26,6 @@ Valitaan näistä 2. vaihtoehto, koska se on yksinkertaisin tapa edetä. Voimme 
 {% include note.html content="Jos valitsit vaihtoehdon 3, niin suosittelen lämpimästi nousemaan lattialta takaisin koneen ääreen - heti vain kun siltä tuntuu. Kyllä tästä selvitään." %}
 
 Aloitetaan ongelman ratkaiseminen lisäämällä uusi rivi laskentapainikkeelle pääruudukolle ja itse painike.
-
-`MainWindow.xaml:`
 
 ```diff
     <Grid>
@@ -47,6 +45,7 @@ Aloitetaan ongelman ratkaiseminen lisäämällä uusi rivi laskentapainikkeelle 
 +        <Button Grid.Row="2"
 +                Content="Calculate" />
 ```
+<figcaption>MainWindow.xaml</figcaption>
 
 Ohjelma on nyt valmis ja voit taputtaa itseäsi selk.. hetkinen seis! Eikö vieläkään? Ei aivan vielä.
 
@@ -56,16 +55,14 @@ Käyttöliittymä voi reagoida elementtien erilaisiin tapahtumiin määrittämä
 
 {% include note.html content='Kun olet kirjoittanut "Click", paina `Tab`, jolloin Visual Studio täydentää koodin automaattisesti. Seuraavaksi VS ehdottaa `<New Event Handler>`. Valitse se, jotta tapahtumakäsittelijä lisätään puolestasi automaattisesti määrittelytiedoston taustatiedostoon ("code-behind").' %}
 
-`MainWindow.xaml:`
 ```diff
         <Button Grid.Row="2"
 +                Click="Button_Click"
                 Content="Calculate" />
 ```
+<figcaption>MainWindow.xaml</figcaption>
 
 Käy kurkkaamassa taustatiedostoa `MainWindow.xaml.cs`. Sinne on tapahtumakäsittelijän lisäyksen yhteydessä lisätty automaattisesti seuraava funktio:
-
-`MainWindow.xaml.cs:`
 
 ```csharp
 private void Button_Click(object sender, RoutedEventArgs e)
@@ -73,6 +70,7 @@ private void Button_Click(object sender, RoutedEventArgs e)
 
 }
 ```
+<figcaption>MainWindow.xaml.cs</figcaption>
 
 Tämä funktio suoritetaan, kun painiketta painetaan.
 

@@ -1,14 +1,14 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus - 4 - Värit"
-image: assets/images/ketuttaako-header.jpg
+title: "Tehdään WPF-sovellus - 4 - Värit"
+image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
 layout: post
 date: 2021-03-20 12:30
 tag:
 - WPF
 category: blog
 author: anssikettunen
-description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
+description: Opas kuinka tehdä Windows-työpöytäsovellus käyttäen WPF, XAML ja C#.
 ---
 
 ## Ongelma: Vain toinen tekstilaatikoista näkyy
@@ -31,14 +31,13 @@ Ennen kuin käymme rivien kimppuun, niin lisätään laatikoille uniikit tekstin
          Background="Cornsilk"
          Foreground="Chocolate" />
 ```
+<figcaption>MainWindow.xaml</figcaption>
 
 {% include note.html content="Jos valitessasi väriä Visual Studio ei tarjoakaan värilistaa, niin klikkaa kursorisi lainausmerkkien sisälle ja paina `Ctrl`+`Space` ja lista ilmestyy uudelleen." %}
 
 {% include note.html content="Huomaa myös, että niin kauan kunnes elementti suljetaan `/>`-merkillä, voit syöttää arvoja elementille omille riveilleen kuten yllä on tehty." %}
 
 Aloitetaan kahden uuden rivin määrittely lisäämällä ruudukon `Grid.RowDefinitions`-kokoelman sisälle kaksi uutta rivin määrittelyä `RowDefinition`:
-
-`MainWindow.xaml:`
 
 ```diff
     <Grid>
@@ -53,6 +52,7 @@ Aloitetaan kahden uuden rivin määrittely lisäämällä ruudukon `Grid.RowDefi
                  Foreground="Chocolate" />
     </Grid>
 ```
+<figcaption>MainWindow.xaml</figcaption>
 
 Nyt kun suoritat ohjelman uudelleen, niin et näe mitään muutoksia edelliseen. Miksi?
 
@@ -64,8 +64,6 @@ Aika tukalaa.
 
 Ratkaisuna voimme määrittää erikseen millä rivillä ja sarakkeella haluamme elementtiemme sijaitsevan. Asetetaan siis `Grid.Row`-arvo alemmalle tekstinsyöttölaatikolle:
 
-`MainWindow.xaml:`
-
 ```diff
         </Grid.RowDefinitions>
         <TextBox Background="MintCream"
@@ -76,6 +74,7 @@ Ratkaisuna voimme määrittää erikseen millä rivillä ja sarakkeella haluamme
                  Foreground="Chocolate" />
     </Grid>
 ```
+<figcaption>MainWindow.xaml</figcaption>
 
 Nyt laatikot näkyvät nätisti päällekkäin, mutta meillä on jälleen uusi ongelma ratkaistavana:
 Mistä tiedämme kumpaan syötämme pituuden ja kumpaan painon?
