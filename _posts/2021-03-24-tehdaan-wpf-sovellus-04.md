@@ -19,7 +19,7 @@ Tarvitsemme rivejä. Paljon rivejä. Lisää rivejä! ..eli kaksi uutta riviä.
 
 Ennen kuin käymme rivien kimppuun, niin lisätään laatikoille uniikit tekstin ja taustan värit, jotta voisimme havaita muutokset helpommin.
 
-### Värien lisäys 🎨
+## Värien lisäys 🎨
 
 * Elementin taustan ja tekstin värit annetaan käyttämällä `Background`- ja `Foreground`-arvoja.
 * Voit käyttää esimerkiksi näitä ehkä jopa herkulliseltakin kuulostavia värejä:

@@ -14,6 +14,8 @@ description: Opas kuinka tehdä Windows-työpöytäsovellus käyttäen WPF, XAML
 
 ![Otsikko ja kuva ketusta][1]
 
+## Alkuhöpinät
+
 Jos haluat pienen maistiaisen Windows-työpöytäsovellusten luonnin maailmasta C#:lla ja WPF:llä, on tämä erinomainen mahdollisuus juuri sinulle!
 
 Tässä luotua sovellusta voidaan käyttää hyvänä pohjana jatkokehitykselle myöhemmin. Tarkoitus on, että saisit tämän avulla tehtyä jotain valmista alusta loppuun.

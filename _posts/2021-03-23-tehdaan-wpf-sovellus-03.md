@@ -11,6 +11,8 @@ author: anssikettunen
 description: Opas kuinka tehdä Windows-työpöytäsovellus käyttäen WPF, XAML ja C#.
 ---
 
+## Otsikon muuttaminen
+
 Keskitytään ensiksi saamaan ohjelman toiminnallisuudet valmiiksi ja sitten voimme hienosäätää ulkoasua selkeämmäksi. Alussa ohjelma tulee näyttämään hyvin alkukantaiselta, mutta suljetaan siltä silmämme ja keskitytään saamaan jotain oikeasti toimivaa aikaiseksi ensiksi. Tyylitellään käyttöliittymästä täysin juhlakelpoinen tapaus joskus myöhemmin (™).
 
 Vaihdetaan aivan ensimmäiseksi sovelluksen otsikko `MainWindow` parempaan. Usein ohjelmointia harjoitetaan käyttäen englanninkielisiä avainsanoja, joten noudatetaan tätä ja nimetään sovelluksemme. Saanen esitellä: `BMI Calculator` 🎉
@@ -44,8 +46,6 @@ Intensiivinen sovelluksen tuijottaminen ei tunnu tuovan lukemia ruudulle, joten 
 * Lisätään kaksi tekstinsyöttölaatikkoa, joihin voimme syöttää pituuden ja painon.
 
 {% include note.html content="[Tässä](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/controls/controls-by-category) on listaus WPF:n yleisistä UI-kontrolleista jaettuna kätevästi eri kategorioihin." %}
-
-### Tekstinsyöttölaatikoiden lisäys
 
 * `<TextBox>` on hyvä valinta tekstin syöttämiseen.
     * `<Label>` ja `<TextBlock>` ovat hyviä valintoja, kun tekstiä halutaan vain näyttää.

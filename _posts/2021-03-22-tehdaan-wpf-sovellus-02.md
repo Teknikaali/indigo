@@ -11,6 +11,8 @@ author: anssikettunen
 description: Opas kuinka tehdä Windows-työpöytäsovellus käyttäen WPF, XAML ja C#.
 ---
 
+## Luodaan uusi projekti
+
 Visual Studion käynnistyttyä sinua tervehtii ikkuna, jolla voit valita sovelluksen projektille tyypin. Luodaan uusi `WPF(.NET)`-työpöytäsovellus. Annetaan projektille nimeksi _Sukunimi.BMICalculator.WPFClient_ ja solutionille vastaavasti _Sukunimi.BMICalculator_ (esim. _Kettunen.BMICalculator_) tähän tapaan:
 
 1. Valitse `Create a new project`
@@ -93,7 +95,7 @@ Nyt olet valmis ihailemaan uutta silmiä hivelevää sovellustasi. Käännetää
 
 Hieno homma ja aivan mieletöntä! Ensimmäinen sovelluksesi on valmi.. hetkinen. Tämä on vasta sovelluksen runko. Sulje ohjelma vielä toistaiseksi. Nyt on aika pistää kädet saveen!
 
-ps. Voit poistaa lisäämämme väliaikaisen `TextBlock`-elementin tässä vaiheessa
+ps. Voit poistaa lisäämämme väliaikaisen `TextBlock`-elementin tässä vaiheessa.
 
 
 ```diff

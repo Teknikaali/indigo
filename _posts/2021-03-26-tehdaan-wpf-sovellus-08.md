@@ -19,7 +19,7 @@ Tarkastelemalla tulosta tarkemmin voimme havaita, että vain pilkku on vääräs
 Painoindeksi = paino(kg) / pituus(m) / pituus(m)
 ```
 
-A-haa! Pituus on annettu kaavassa metreinä, joten periaatteessa mitään ongelmaa ei ollut. Kyse oli vain käyttäjän tietämättömyydestä, että arvot pitäisi antaa metreinä senttimetrien sijaan. Ihmisen pituudesta puhuttaessa käytetään useammin senttimetrejä kuin metrejä, joten muunnetaan sovellus käyttämään tätä yleisempää yksikköä.
+A-haa! Pituus on annettu kaavassa **metreinä**, joten periaatteessa mitään ongelmaa ei ollut. Kyse oli vain käyttäjän tietämättömyydestä, että arvot pitäisi antaa metreinä **senttimetrien** sijaan. Ihmisen pituudesta puhuttaessa käytetään useammin senttimetrejä kuin metrejä, joten muunnetaan sovellus käyttämään tätä yleisempää yksikköä.
 
 Lisätään ensin tekstilaatikoihin yksiköt esille, jotta jatkossa ei jäisi epäselväksi, että missä muodossa arvot pitäisi syöttää.
 
