@@ -2,7 +2,7 @@
 title: "Tehdään WPF-sovellus - 1 - Alkupalat"
 image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
 layout: post
-date: 2021-03-21 17:24
+date: 2021-03-21 17:23
 tag:
 - WPF
 star: true

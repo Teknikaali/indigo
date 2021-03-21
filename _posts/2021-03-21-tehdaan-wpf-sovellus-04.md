@@ -2,7 +2,7 @@
 title: "Tehdään WPF-sovellus - 4 - Värit"
 image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
 layout: post
-date: 2021-03-21 17:27
+date: 2021-03-21 17:26
 tag:
 - WPF
 category: blog
