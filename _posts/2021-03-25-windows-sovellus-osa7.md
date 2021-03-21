@@ -1,9 +1,9 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus - Osa 7 - Laskenta"
+title: "Tehdään Windows-työpöytäsovellus - 7 - Laskenta"
+image: assets/images/ketuttaako-header.jpg
 layout: post
-date: 2021-03-25 18:00
-headerImage: false
+date: 2021-03-20 15:00
 tag:
 - WPF
 category: blog
@@ -19,11 +19,12 @@ Haluaisimme kahden asian tapahtuvan, kun painiketta painetaan:
 
 Aivan ensimmäiseksi tarvitsemme käsiimme pituuden ja painon arvot ennen kuin voimme tehdä laskutoimituksen. Lisätään syötekentille nimet, jotta voimme viitata niihin taustakoodissa.
 
-💡 Elementeille voi antaa nimen `Name`-attribuutilla ([tai `x:Name`](https://stackoverflow.com/questions/589874/in-wpf-what-are-the-differences-between-the-xname-and-name-attributes)), mutta tässä on pari hyvää nyrkkisääntöä:
-* Nimen voi antaa ainakin interaktiivisille elementeille eli niille, joita käyttäjä voi jollain tavoin käsitellä:
+{% include note_start.html content='Elementeille voi antaa nimen `Name`-attribuutilla ([tai `x:Name`](https://stackoverflow.com/questions/589874/in-wpf-what-are-the-differences-between-the-xname-and-name-attributes)), mutta tässä on pari hyvää nyrkkisääntöä:
+* Nimi kannattaa antaa oman harkinnan mukaan ainakin interaktiivisille elementeille, eli niille joita käyttäjä voi jollain tavoin käsitellä:
     * Esim. `<TextBox>` ja `<Button>`
 * Nimeä ei välttämättä kannata antaa vain ulkoasuun vaikuttaville elementeille:
-    * Esim. `<Grid>` ja `<Border>`
+    * Esim. `<Grid>` ja `<Border>`' %}
+{% include note_end.html %}
 
 `MainWindow.xaml:`
 
@@ -49,7 +50,7 @@ Nyt voimme viitata elementteihin `WeightInput` ja `HeightInput` taustakoodin puo
 
 Tässä kohtaa on hyvä huomata, että tekstilaatikkoon syötetty sisältö on nimensä mukaisesti _tekstiä_. Emme voi suorittaa laskutoimituksia tekstillä, joten meidän on myös muunnettava syöte `double`-tyyppiseksi.
 
-💡 `decimal`, `float` ja `double` eroavat hieman toisistaan, joten [tässä](https://stackoverflow.com/questions/618535/difference-between-decimal-float-and-double-in-net) lisää tietoa aiheesta helposti pureskeltavassa muodossa.
+{% include note.html content="`decimal`, `float` ja `double` eroavat hieman toisistaan, joten [tässä](https://stackoverflow.com/questions/618535/difference-between-decimal-float-and-double-in-net) lisää tietoa aiheesta." %}
 
 Poimitaan muunnetut syötteet omiin muuttujiinsa, jolloin meidän on helpompi käsitellä niitä:
 
@@ -92,7 +93,7 @@ Jätämme vielä tässä vaiheessa virheenkäsittelyn erittäin yksinkertaiselle
         }
 ```
 
-💡 Mielenkiintoista kyllä, että tästä käytetystä [kaavasta](https://fi.wikipedia.org/wiki/Painoindeksi#M%C3%A4%C3%A4ritelm%C3%A4) on ehdotettu [uutta muotoa](https://en.wikipedia.org/wiki/Body_mass_index#Proposed_New_BMI), joka ottaisi paremmin huomioon vääristymät lyhyiden ja pitkien henkilöiden kohdalla.
+{% include note.html content="Mielenkiintoisena pointtina tästä käytetystä [kaavasta](https://fi.wikipedia.org/wiki/Painoindeksi#M%C3%A4%C3%A4ritelm%C3%A4) on ehdotettu [uutta muotoa](https://en.wikipedia.org/wiki/Body_mass_index#Proposed_New_BMI), joka ottaisi paremmin huomioon vääristymät lyhyiden ja pitkien henkilöiden kohdalla." %}
 
 ---
 
@@ -111,7 +112,7 @@ Tuloksen voimme tuoda näkyviin popup-viestilaatikolla:
             }
 ```
 
-💡 Lisäämällä dollarimerkin ennen lainausmerkkejä voimme kätevästi syöttää arvot suoraan tekstin sisälle: `$"Teksti {arvo}"`. Lisää aiheesta: [$ - string interpolation](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated).
+{% include note.html content='Lisäämällä dollarimerkin ennen lainausmerkkejä voimme kätevästi syöttää arvot suoraan tekstin sisälle: `$"Teksti {arvo}"`. Lisää aiheesta: [$ - string interpolation](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated).' %}
 
 Hmm. Jokin tässä ei nyt täsmää.. Kaava _näyttäisi_ olevan ok ja viestin esittäminenkin _näyttäisi_ olevan ihan kunnossa. No, ei välitetä pienestä "jotain saattaa olla pielessä"-ajatuksesta takaraivossamme ja käynnistetään aivan varmasti 100% täysin toimiva ohjelmamme! Olemmehan sen sentään aivan itse koodanneet. Täysin bugivapaata ja priimaa softaa, eikös?
 
@@ -121,6 +122,8 @@ Paina `Calculate`-painiketta.
 
 Sain itse tulokseksi `0,0020902...`. Mutta mitäs ihmettä! Tämä ei missään määrin voi olla oikea tulos, sillä muutoinhan olisin _sairaalloisen alipainoinen_. Huhhuh.
 
+{% include note.html content="Voit vilkaista miltä tulosten pitäisi oikeasti näyttää antamillasi arvoilla esim. [laskurini.fi](https://www.laskurini.fi/terveys/painoindeksilaskuri)-palvelun painoindeksilaskurilla." %}
+
 Onko sovelluksessamme _bugi_? Eikai sentään.. Voiko tämä olla?
 
-💡 Voit vilkaista miltä tulosten pitäisi oikeasti näyttää antamillasi arvoilla esim. [laskurini.fi](https://www.laskurini.fi/terveys/painoindeksilaskuri)-palvelun painoindeksilaskurilla.
+Korjataan pi(l)kkuvirhe seuraavaksi ja viimeistellään sovellus.

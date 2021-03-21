@@ -1,10 +1,8 @@
 <section class="author{% if site.disqus == false %} no-disqus{% endif %}">
     <div class="toleft">
-        <img
-            class="selfie"
+        <img class="selfie"
             src="{% if site.authors[page.author].external-image == true %}{{ site.authors[page.author].picture }}{% else %}{{ site.url }}/{{ site.authors[page.author].picture }}{% endif %}"
-            alt="{{ site.authors[page.author].name }}"
-        />
+            alt="{{ site.authors[page.author].name }}" />
     </div>
 
     <div class="toright">
@@ -23,18 +21,19 @@
                 ><span class="icon-twitter">Tweet</span>
             </a> -->
 
-            <a
-                class="facebook"
-                href="javascript:void(0)"
-                onclick="window.open('https://facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626,height=436'); return false;"
-            >
-                <svg class="icon icon-facebook">
-                    <use xlink:href="#icon-facebook"></use></svg
-                ><span class="icon-facebook-rect">Share</span>
+            <a class="linkedin"
+                href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ site.url }}{{ page.url }}&amp;title={{ page.title }}&amp;summary={{ page.description }}&amp;source={{ site.url }}"
+                target="_blank">
+                <svg class="icon icon-linkedin">
+                    <use xlink:href="#icon-linkedin"></use>
+                </svg><span class="icon-linkedin">Share</span>
             </a>
 
-            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ site.url }}{{ page.url }}&amp;title={{ page.title }}&amp;summary={{ page.description }}&amp;source={{ site.url }}" target="_blank">
-                <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg><span class="icon-linkedin">Share</span>
+            <a class="facebook" href="javascript:void(0)"
+                onclick="window.open('https://facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626,height=436'); return false;">
+                <svg class="icon icon-facebook">
+                    <use xlink:href="#icon-facebook"></use>
+                </svg><span class="icon-facebook-rect">Share</span>
             </a>
 
             <!-- <a class="reddit" href="https://reddit.com/submit?url={{ site.url }}{{ page.url }}&amp;title={{ page.title }}" target="_blank">

@@ -1,9 +1,9 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus - Osa 1 - Alkupalat"
+title: "Tehdään Windows-työpöytäsovellus - 1 - Alkupalat"
+image: assets/images/ketuttaako-header.jpg
 layout: post
 date: 2021-03-19 18:00
-headerImage: false
 tag:
 - WPF
 star: true
@@ -12,15 +12,13 @@ author: anssikettunen
 description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
 ---
 
-## Alkupalat
-
 Jos haluat pienen maistiaisen Windows-työpöytäsovellusten luonnin maailmasta C#:lla ja WPF:llä, on tämä erinomainen mahdollisuus juuri sinulle!
+
+Tässä luotua sovellusta voidaan käyttää hyvänä pohjana jatkokehitykselle myöhemmin. Tarkoitus on, että saisit tämän avulla tehtyä jotain valmista alusta loppuun!
 
 Olen yrittänyt pitää asiat mahdollisimman yksinkertaisella tasolla ja selittää vastaan tulevat uudet konseptit korkealla tasolla paneutumatta niihin liian syvällisesti.
 
 Teen sen olettamuksen, että olet ehkä kokeillut jo jotain ohjelmointiin liittyvää ja hallitset tietokoneen käytön.
-
-Tässä luotua sovellusta voidaan käyttää hyvänä pohjana jatkokehitykselle myöhemmin. Tarkoitus on, että saisit tämän avulla tehtyä jotain valmista alusta loppuun!
 
 Koodimuutokset on merkattu näin:
 
@@ -42,11 +40,11 @@ Tätä riviä ei muokata.
 Näin riviä on muokattu.
 ```
 
-### WPF - Windows Presentation Framework
+## WPF - Windows Presentation Framework
 
-Toteutamme sovelluksemme WPF-käyttöliittymän [XAML](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/xaml-overview) -markup-kielellä ja lisäämme mausteeksi sekaan hyppysellisen C#:ia.
+Toteutamme sovelluksemme WPF-käyttöliittymän [XAML](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/xaml-overview) -kielellä ja pääsemme käyttämään myös C#:ia.
 
-Teemme tämän esimerkkisovelluksen UI edellä, eli keskitymme ensin käyttöliittymän muovaamiseen ja sitten vasta toiminnallisuuden toteuttamiseen. WPF:llä pystyy helposti toteuttamaan ohjelman toiminnallisuuden erillään käyttöliittymästä ja tähän tulisikin pyrkiä. Tämä mahdollistaa vaikka sen, että yksi henkilö voi keskittyä täysin hienoon ulkoasuun ja käytettävyyteen ja toinen voi keskittyä täysin tekemään itse toiminnallista osuutta ohjelmasta.
+Teemme tämän esimerkkisovelluksen UI edellä, eli keskitymme ensin käyttöliittymän muovaamiseen ja sitten vasta toiminnallisuuden toteuttamiseen. WPF:llä pystyy helposti toteuttamaan ohjelman toiminnallisuuden erillään käyttöliittymästä. Tämä mahdollistaa vaikkapa sen, että yksi henkilö voi keskittyä leipomaan hienoa ulkoasua sovellukselle ja toinen taas tekemään itse toiminnallista osuutta.
 
 Eiköhän aloiteta. Onnea matkaan! 👍
 
@@ -54,11 +52,12 @@ Eiköhän aloiteta. Onnea matkaan! 👍
 
 ## Määrittely
 
-Ensimmäisenä pitää määritellä mitä haluamme sovelluksen pääpiirteittäin tekevän. 
+Ensimmäisenä määrittelemme mitä haluamme sovelluksen pääpiirteittäin tekevän. 
 
-💡 Sovelluksia on helpompi luoda, kun on määritellyt selkeät tavoitteet ja rajat sovellukselle ja itselleen.
+{% include note.html content="Sovelluksia on mielekkäämpää luoda, kun on ensin määritellyt selkeät tavoitteet ja rajat sovellukselle ja itselleen." %}
 
-Sovellus voisi vaikkapa antaa vastauksen kysymykseen "Mikä on painoindeksi annetulle pituudelle ja painolle?". Yksinkertaisuuden nimissä luomme siis painoindeksin laskemiseen käytettävän sovelluksen seuraavin vaatimuksin:
+Sovellus voisi vaikkapa antaa vastauksen kysymykseen: "Mikä on painoindeksi annetulle pituudelle ja painolle?"
+Yksinkertaisuuden nimissä luomme siis painoindeksin laskemiseen käytettävän sovelluksen seuraavin vaatimuksin:
 * Sovellus laskee antamieni tietojen pohjalta painoindeksin
 * Voin tarkastella tuloksia
 
@@ -71,6 +70,10 @@ Näitä määrittelyjä voidaan myös tarkentaa tai laajentaa myöhemmin, kun op
 * Käy vilkaisemassa [painoindeksin määritelmä](https://fi.wikipedia.org/wiki/Painoindeksi)
 * Varaa itsellesi hetki aikaa
     * Ehkä myös lämmin kupponen juotavaa
-    * Mahdollisesti iso pehmeä tyyny on myös hyvä varuste (oman harkinnan mukaan)
+    * Mahdollisesti iso pehmeä tyyny on myös hyvä varuste (oman harkinnan mukaan ja riippuen siitä mitä valintoja teet myöhemmin)
 
-💡 Voit myös pilkkoa tekemisen useammalle eri kerralle. Kaikkea ei ole pakko rykäistä kerralla valmiiksi. Olen sijoittanut tämänkin virkkeen alapuolella näkyviä jakajia mahdollisesti hyviin taukokohtiin.
+{% include note.html content="Voit myös pilkkoa tekemisen useammalle eri kerralle. Kaikkea ei ole pakko rykäistä kerralla valmiiksi. Esimerkiksi yksi postaus kerrallaan voi olla sopiva tahti edetä." %}
+
+Muotoillaan seuraavaksi sovelluksen runko valmiiksi.
+
+Pääset siirtymään vaiheiden välillä alapuolella olevista linkeistä 👇

@@ -1,9 +1,9 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus - Osa 8 - Viimeistely"
+title: "Tehdään Windows-työpöytäsovellus - 8 - Viimeistely"
+image: assets/images/ketuttaako-header.jpg
 layout: post
-date: 2021-03-26 18:00
-headerImage: false
+date: 2021-03-20 15:50
 tag:
 - WPF
 category: blog
@@ -11,7 +11,7 @@ author: anssikettunen
 description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
 ---
 
-### Ongelma: Laskettu tulos ei näytä oikealta
+## Ongelma: Laskettu tulos ei näytä oikealta
 
 Tarkastelemalla tulosta tarkemmin voimme havaita, että vain pilkku on väärässä paikassa. Saimme tulokseksi `0,0020902`, kun oikea tulos olisi ollut `20,9`. Katsotaanpa kaavaa vielä uudelleen:
 
@@ -19,9 +19,9 @@ Tarkastelemalla tulosta tarkemmin voimme havaita, että vain pilkku on vääräs
 Painoindeksi = paino(kg) / pituus(m) / pituus(m)
 ```
 
-A-haa! Pituus on annettu kaavassa metreinä, joten periaatteessa mitään ongelmaa ei ollut. Kyse oli vain käyttäjän tietämättömyydestä, että arvot pitäisi antaa metreinä. Ihmisen pituudesta puhuttaessa on käytetään useammin senttimetrejä kuin metrejä, joten muunnetaan sovellus käyttämään tätä yleisempää yksikköä.
+A-haa! Pituus on annettu kaavassa metreinä, joten periaatteessa mitään ongelmaa ei ollut. Kyse oli vain käyttäjän tietämättömyydestä, että arvot pitäisi antaa metreinä senttimetrien sijaan. Ihmisen pituudesta puhuttaessa käytetään useammin senttimetrejä kuin metrejä, joten muunnetaan sovellus käyttämään tätä yleisempää yksikköä.
 
-Lisätään ensin tekstilaatikoihin yksiköt esille, jotta jatkossa ei tulisi epäselvää missä muodossa arvot pitää syöttää.
+Lisätään ensin tekstilaatikoihin yksiköt esille, jotta jatkossa ei jäisi epäselväksi, että missä muodossa arvot pitäisi syöttää.
 
 `MainWindow.xaml:`
 
@@ -35,17 +35,16 @@ Lisätään ensin tekstilaatikoihin yksiköt esille, jotta jatkossa ei tulisi ep
 +<TextBlock Text="Height (cm)" />
 ```
 
-Seuraavaksi meidän tulee korjata yksikkömuunnos taustakoodin puolelta muuntamalla metrit senttimetreiksi:
+Seuraavaksi meidän tulee korjata yksikkömuunnos taustakoodin puolelta muuntamalla metrit senttimetreiksi. Tehdään muunnos juuri ennen indeksin laskentaa:
+
 `MainWindow.xaml.cs:`
 
 ```diff
-if(isWeightValid && isHeightValid)
-            {
-+                height = height / 100;
-                var bodyMassIndex = weight / Math.Pow(height, 2);
++    height = height / 100;
+    var bodyMassIndex = weight / Math.Pow(height, 2);
 ```
 
-💡 `height = height / 100` voi kirjoittaa myös muotoon `height /= 100` ([Compound assignment](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/assignment-operator#compound-assignment))
+{% include note.html content="`height = height / 100` voi kirjoittaa myös muotoon `height /= 100` ([Compound assignment](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/assignment-operator#compound-assignment))" %}
 
 Nyt ohjelma antaa tulokseksi lähes hyväksyttävän lukeman `2,0902385...`. Meidän ei kuitenkaan tarvitse tietää lukemaa aivan näin tarkasti, joten tiputetaan vielä muutama desimaali pois:
 
@@ -56,7 +55,7 @@ Nyt ohjelma antaa tulokseksi lähes hyväksyttävän lukeman `2,0902385...`. Mei
             MessageBox.Show(resultMessage);
 ```
 
-💡 `N1` rajaa desimaalit sopivasti yhteen. [Tässä](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings#standard-format-specifiers) eri muotoilumäärittelyt listattuna (Standard format specifiers).
+{% include note.html content="`N1` rajaa desimaalit sopivasti yhteen. [Tässä](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings#standard-format-specifiers) eri muotoilumäärittelyt listattuna (Standard format specifiers)." %}
 
 ---
 

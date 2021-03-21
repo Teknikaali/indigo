@@ -1,9 +1,9 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus - Osa 5 - Asettelu"
+title: "Tehdään Windows-työpöytäsovellus - 5 - Asettelu"
+image: assets/images/ketuttaako-header.jpg
 layout: post
-date: 2021-03-23 18:00
-headerImage: false
+date: 2021-03-20 12:40
 tag:
 - WPF
 category: blog
@@ -11,7 +11,7 @@ author: anssikettunen
 description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
 ---
 
-### Ongelma: Tekstilaatikoita ei erota toisistaan
+## Ongelma: Tekstilaatikoita ei erota toisistaan
 
 Tarvitsemme selkeän tavan ilmaista kumpaan laatikkoon pitää syöttää pituus ja kumpaan painon.
 
@@ -48,6 +48,7 @@ Huomioi erityisesti, että nyt molemmat `TextBox`-elementit ovat omien ruudukkoj
 ```
 
 Ohjelmamme käyttöliittymän koodin pitäisi näyttää nyt tältä kokonaisuudessaan:
+
 `MainWindow.xaml:`
 
 ```xml
@@ -93,7 +94,7 @@ Ohjelmamme käyttöliittymän koodin pitäisi näyttää nyt tältä kokonaisuud
 </Window>
 ```
 
-💡 Voit kommentoida XAML:ssa käyttämällä tagia `<!--` avaamaan kommentti ja `-->` sulkemaan se. Kommentteja on hyvä käyttää, jos haluat erityisesti selkeyttää jotain kohtaa, tai laittaa huomioita määrittelyn sekaan tarkentamaan asioita. Esimerkiksi jos edeltävä koodilistaus tuntuu liian sekavalta kaikkine ruudukkoineen, niin voit vapaasti lisätä kommentteja selkeyttämään mikä minkäkin elementin tehtävä on.
+{% include note_start.html content='Voit kommentoida XAML:ssa käyttämällä tagia `<!--` avaamaan kommentti ja `-->` sulkemaan se. Kommentteja on hyvä käyttää, jos haluat erityisesti selkeyttää jotain kohtaa, tai laittaa huomioita määrittelyn sekaan tarkentamaan asioita. Esimerkiksi jos edeltävä koodilistaus tuntuu liian sekavalta kaikkine ruudukkoineen, niin voit vapaasti lisätä kommentteja selkeyttämään mikä minkäkin elementin tehtävä on. 
 
 ```xml
 <!-- Tämä on kommentti -->
@@ -102,8 +103,11 @@ Ohjelmamme käyttöliittymän koodin pitäisi näyttää nyt tältä kokonaisuud
     Tämä on useamman rivin 
     pituinen kommentti
  -->
-```
+```' %}
+{% include note_end.html %}
 
 Noin!
 
 Nyt voimme selkeästi syöttää haluamamme tiedot, mutta entäs miten saamme itse laskentatuloksen näkyviin?
+
+Tuodaan laskentatulokset näkyviin seuraavaksi.

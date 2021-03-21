@@ -1,17 +1,17 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus - Osa 4 - Värit"
+title: "Tehdään Windows-työpöytäsovellus - 4 - Värit"
+image: assets/images/ketuttaako-header.jpg
 layout: post
-date: 2021-03-22 18:00
-headerImage: false
+date: 2021-03-20 12:30
 tag:
 - WPF
 category: blog
-author: Anssi Kettunen
+author: anssikettunen
 description: Opas Windows-työpöytäsovelluksen tekemiseen WPF:llä
 ---
 
-### Ongelma: Vain toinen tekstilaatikoista näkyy
+## Ongelma: Vain toinen tekstilaatikoista näkyy
 
 Meidän täytyy määritellä `Grid` tarkemmin, jotta elementit eivät kasaantuisi sen sisällä päällekkäin.
 
@@ -19,7 +19,7 @@ Tarvitsemme rivejä. Paljon rivejä. Lisää rivejä! ..eli kaksi uutta riviä.
 
 Ennen kuin käymme rivien kimppuun, niin lisätään laatikoille uniikit tekstin ja taustan värit, jotta voisimme havaita muutokset helpommin.
 
-#### Värien lisäys 🎨
+### Värien lisäys 🎨
 
 * Elementin taustan ja tekstin värit annetaan käyttämällä `Background`- ja `Foreground`-arvoja.
 * Voit käyttää esimerkiksi näitä ehkä jopa herkulliseltakin kuulostavia värejä:
@@ -32,11 +32,11 @@ Ennen kuin käymme rivien kimppuun, niin lisätään laatikoille uniikit tekstin
          Foreground="Chocolate" />
 ```
 
-💡 Jos valitessasi väriä Visual Studio ei tarjoakaan värilistaa, niin klikkaa kursorisi lainausmerkkien sisälle ja paina `Ctrl`+`Space` ja lista ilmestyy uudelleen.
+{% include note.html content="Jos valitessasi väriä Visual Studio ei tarjoakaan värilistaa, niin klikkaa kursorisi lainausmerkkien sisälle ja paina `Ctrl`+`Space` ja lista ilmestyy uudelleen." %}
 
-💡 Huomaa myös, että niin kauan kunnes elementti suljetaan `/>`-merkillä, voit syöttää arvoja elementille omille riveilleen kuten yllä on tehty.
+{% include note.html content="Huomaa myös, että niin kauan kunnes elementti suljetaan `/>`-merkillä, voit syöttää arvoja elementille omille riveilleen kuten yllä on tehty." %}
 
-Aloitetaan kahden uuden rivin määrittely lisäämällä ruudukon `Grid.RowDefinitions`-kokoelman sisälle kaksi uutta rivin määrittelyä (`RowDefinition`):
+Aloitetaan kahden uuden rivin määrittely lisäämällä ruudukon `Grid.RowDefinitions`-kokoelman sisälle kaksi uutta rivin määrittelyä `RowDefinition`:
 
 `MainWindow.xaml:`
 
@@ -62,7 +62,7 @@ Ongelmamme johtuu siitä, että oletusarvoisesti `Grid`:n sisälle lisätyt elem
 
 Aika tukalaa.
 
-Ratkaisuna voimme määrittää erikseen millä rivillä ja sarakkeella haluamme elementtiemme sijaitsevan. Asetetaan siis `Grid.Row`-arvo alemmalle `TextBox`:lle:
+Ratkaisuna voimme määrittää erikseen millä rivillä ja sarakkeella haluamme elementtiemme sijaitsevan. Asetetaan siis `Grid.Row`-arvo alemmalle tekstinsyöttölaatikolle:
 
 `MainWindow.xaml:`
 
@@ -79,3 +79,5 @@ Ratkaisuna voimme määrittää erikseen millä rivillä ja sarakkeella haluamme
 
 Nyt laatikot näkyvät nätisti päällekkäin, mutta meillä on jälleen uusi ongelma ratkaistavana:
 Mistä tiedämme kumpaan syötämme pituuden ja kumpaan painon?
+
+Selkeytetään sovelluksen asettelua seuraavaksi.

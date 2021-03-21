@@ -1,9 +1,9 @@
 ---
 hidden: true
-title: "Tehdään Windows-työpöytäsovellus - Osa 6 - Tulosten näyttäminen"
+title: "Tehdään Windows-työpöytäsovellus - 6 - Tulosten näyttäminen"
+image: assets/images/ketuttaako-header.jpg
 layout: post
-date: 2021-03-24 18:00
-headerImage: false
+date: 2021-03-20 12:45
 tag:
 - WPF
 category: blog
@@ -23,7 +23,7 @@ Voisimme ratkaista ongelman muutamallakin eri tavalla, mutta valitaan näistä y
 
 Valitaan näistä 2. vaihtoehto, koska se on yksinkertaisin tapa edetä. Voimme palata myös 1. vaihtoehtoon myöhemmin, mutta tämän saavuttamiseksi täytyy nähdä enemmän vaivaa.
 
-💡 Jos valitsit vaihtoehdon 3, niin suosittelen lämpimästi nousemaan lattialta takaisin koneen ääreen heti kun siltä vain tuntuu. Kyllä tästä selvitään.
+{% include note.html content="Jos valitsit vaihtoehdon 3, niin suosittelen lämpimästi nousemaan lattialta takaisin koneen ääreen - heti vain kun siltä tuntuu. Kyllä tästä selvitään." %}
 
 Aloitetaan ongelman ratkaiseminen lisäämällä uusi rivi laskentapainikkeelle pääruudukolle ja itse painike.
 
@@ -50,9 +50,11 @@ Aloitetaan ongelman ratkaiseminen lisäämällä uusi rivi laskentapainikkeelle 
 
 Ohjelma on nyt valmis ja voit taputtaa itseäsi selk.. hetkinen seis! Eikö vieläkään? Ei aivan vielä.
 
-Emme ole kertoneet ohjelmalle vielä ollenkaan, että mitä painikkeen painamisesta pitäisi tapahtua. Käyttöliittymä voi reagoida elementtien erilaisiin tapahtumiin. Painikkeilla on `Click`-tapahtuma, jota voimme kuunnella lisäämällä `Button`-elementille tapahtumakäsittelijän:
+Emme ole kertoneet ohjelmalle vielä ollenkaan, että mitä painikkeen painamisesta pitäisi tapahtua!
 
-💡 Kun olet kirjoittanut "Click", paina `Tab`, jolloin Visual Studio täydentää koodin automaattisesti. Seuraavaksi VS ehdottaa `<New Event Handler>`. Valitse se, jotta tapahtumakäsittelijä lisätään puolestasi automaattisesti määrittelytiedoston taustatiedostoon ("code-behind").
+Käyttöliittymä voi reagoida elementtien erilaisiin tapahtumiin määrittämällämme tavalla. Painikkeilla on `Click`-tapahtuma, jota voimme kuunnella lisäämällä `Button`-elementille tapahtumakäsittelijän:
+
+{% include note.html content='Kun olet kirjoittanut "Click", paina `Tab`, jolloin Visual Studio täydentää koodin automaattisesti. Seuraavaksi VS ehdottaa `<New Event Handler>`. Valitse se, jotta tapahtumakäsittelijä lisätään puolestasi automaattisesti määrittelytiedoston taustatiedostoon ("code-behind").' %}
 
 `MainWindow.xaml:`
 ```diff
@@ -72,9 +74,11 @@ private void Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-💡 Voit myös kirjoittaa nämä käsin ilman automatiikan avuja
+Tämä funktio suoritetaan, kun painiketta painetaan.
 
-💡 WPF:ssä on suositeltu tapa tehdä painikkeen painamiseen reagointi komentojen avulla hyödyntäen hieman erilaista lähestymistapaa toiminnallisuuden sitomiseksi käyttöliittymään, mutta edetään vielä yksinkertaisuus edellä. Tarkoitus ei ole kuitenkaan tukahduttaa itseämme informaatiähkyllä!
+{% include note.html content="Voit myös kirjoittaa nämä käsin ilman automatiikan avuja" %}
+
+{% include note.html content="WPF:ssä on suositeltu tapa tehdä painikkeen painamiseen reagointi komentojen avulla hyödyntäen hieman erilaista lähestymistapaa toiminnallisuuden sitomiseksi käyttöliittymään, mutta edetään vielä yksinkertaisuus edellä. Tarkoitus ei ole kuitenkaan tukahduttaa itseämme informaatiähkyllä!" %}
 
 Laitetaan debuggaamiselle pysäytyspiste ensimmäisen aaltosulkeen kohdalle klikkaamalla tiedoston vasemmassa reunassa olevaa saraketta. Punainen täplä (🔴 breakpoint) kertoo, että debugatessamme tähän kohtaan pysähdytään. 
 * Suoritetaan ohjelma painamalla `F5`
@@ -84,3 +88,5 @@ Laitetaan debuggaamiselle pysäytyspiste ensimmäisen aaltosulkeen kohdalle klik
 * Lopeta lopuksi ohjelman suoritus (`Shift`+`F5`, `Debug->Stop Debugging` tai VS:n yläreunasta 🟥-painike)
 
 Nyt voimme olla varmoja, että käyttöliittymämme toimii ainakin tähän asti oikein. Painike ei vieläkään kyllä tee yhtikäs mitään mielenkiintoista, joten on aika korjata asia!
+
+Seuraavaksi laitetaan painike tekemään töitä.
