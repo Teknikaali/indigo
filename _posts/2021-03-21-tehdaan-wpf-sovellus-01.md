@@ -58,7 +58,7 @@ Yksinkertaisuuden nimissä luomme siis painoindeksin laskemiseen käytettävän 
 
 On myös hyvä hahmotella valmiiksi miltä sovellus voisi ehkä näyttää:
 
-![Huikea rautalankamalli sovelluksesta][2]
+![Huikea rautalankamalli sovelluksesta][2]{: .center-image }
 <figcaption class="caption">Huikea rautalankamalli sovelluksesta</figcaption>
 
 Näitä määrittelyjä voidaan myös tarkentaa tai laajentaa myöhemmin, kun opimme sovelluksesta ja tarpeistamme enemmän. Ei oteta liian suurta haukkausta heti alkuunsa.
