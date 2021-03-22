@@ -56,6 +56,11 @@ Yksinkertaisuuden nimissä luomme siis painoindeksin laskemiseen käytettävän 
 * Sovellus laskee antamieni tietojen pohjalta painoindeksin
 * Voin tarkastella tuloksia
 
+On myös hyvä hahmotella valmiiksi miltä sovellus voisi ehkä näyttää:
+
+![Huikea rautalankamalli sovelluksesta][2]
+<figcaption class="caption">Huikea rautalankamalli sovelluksesta</figcaption>
+
 Näitä määrittelyjä voidaan myös tarkentaa tai laajentaa myöhemmin, kun opimme sovelluksesta ja tarpeistamme enemmän. Ei oteta liian suurta haukkausta heti alkuunsa.
 
 ## Esivaatimukset
@@ -74,3 +79,4 @@ Muotoillaan seuraavaksi sovelluksen runko valmiiksi.
 Pääset siirtymään vaiheiden välillä alapuolella olevista linkeistä 👇
 
 [1]: /assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
+[2]: /assets/images/tehdaan-wpf-sovellus/01-01.png
