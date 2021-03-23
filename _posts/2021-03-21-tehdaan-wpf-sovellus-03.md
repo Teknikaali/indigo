@@ -1,6 +1,6 @@
 ---
 title: "Tehdään WPF-sovellus - 3 - Käyttöliittymän toteutus"
-image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
+image: assets/images/tehdaan-wpf-sovellus/03-header.jpg
 layout: post
 date: 2021-03-21 17:25
 tag:
