@@ -1,6 +1,6 @@
 ---
 title: "Tehdään WPF-sovellus - 4 - Värit"
-image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
+image: assets/images/tehdaan-wpf-sovellus/04-header.jpg
 layout: post
 date: 2021-03-21 17:26
 tag:
