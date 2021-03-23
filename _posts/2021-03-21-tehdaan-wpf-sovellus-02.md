@@ -1,6 +1,6 @@
 ---
 title: "Tehdään WPF-sovellus - 2 - Sovelluksen runko"
-image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
+image: assets/images/tehdaan-wpf-sovellus/02-header.jpg
 layout: post
 date: 2021-03-21 17:24
 tag:
