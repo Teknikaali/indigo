@@ -39,6 +39,8 @@ Tätä riviä ei muokata.
 + Näin riviä on muokattu.
 ```
 
+Sovelluksen lähdekoodi löytyy myös [GitHubista](https://github.com/Teknikaali/wpf-opas).
+
 Eiköhän aloiteta. Onnea matkaan! 👍
 
 ---
