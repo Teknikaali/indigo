@@ -89,8 +89,9 @@ Päivitetään tekstinsyöttölaatikon kursori, fontti ja tekstin asemointi, jon
     <Setter Property="TextAlignment" Value="Center" />
 </Style>
 ```
+<figcaption>App.xaml - TextBox-tyyli kokonaisuudessaan.</figcaption>
 
-Joissain tapauksissa on hyvä käyttää `F4`-painikkeella avautuvaa Properties-ikkunaa. Esimerkiksi en ainakaan itse muista ulkoa kuin miltä ehkä Arial, Impact, Consolas ja Comic Sans näyttävät. On siis helpompi vain valita käytettävä fontti alasvetovalikosta, joka näyttää kätevästi esimerkin kaikista asennetuista fonteista:
+Joissain tapauksissa on hyvä käyttää `F4`-painikkeella avautuvaa Properties-ikkunaa. Esimerkiksi en ainakaan itse muista ulkoa kuin miltä Comic Sans ja muutama muu fontti näyttävät. On siis helpompi vain valita käytettävä fontti alasvetovalikosta, joka näyttää kätevästi esimerkin kaikista asennetuista fonteista:
 
 ![Fontin ominaisuudet Properties-ikkunassa.][3]{: .center-image }
 <figcaption class="caption">Fontin ominaisuudet Properties-ikkunassa.</figcaption>
