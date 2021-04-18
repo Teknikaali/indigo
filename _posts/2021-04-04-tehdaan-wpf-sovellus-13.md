@@ -2,7 +2,7 @@
 title: "Tehdään WPF-sovellus - 13 - Painikkeen uusi ulkoasu"
 image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
 layout: post
-date: 2021-04-04 23:00
+date: 2021-04-18 13:00
 tag:
 - WPF
 category: blog

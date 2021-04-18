@@ -2,7 +2,7 @@
 title: "Tehdään WPF-sovellus - 12 - Tekstilaatikko nätiksi"
 image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
 layout: post
-date: 2021-04-04 22:00
+date: 2021-04-11 13:00
 tag:
 - WPF
 category: blog
