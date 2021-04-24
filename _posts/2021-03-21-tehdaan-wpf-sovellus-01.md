@@ -39,6 +39,16 @@ Tätä riviä ei muokata.
 + Näin riviä on muokattu.
 ```
 
+Tai vaihtoehtoisesti esittänyt pätkän koodia ja selittänyt sen toimintaa tarkemmin:
+
+```xml
+<Style.Triggers>
+    <Trigger Property="IsMouseOver" Value="True">
+        <Setter Property="Background" Value="#31142F" />
+    </Trigger>
+</Style.Triggers>
+```
+
 Sovelluksen lähdekoodi löytyy myös [GitHubista](https://github.com/Teknikaali/wpf-opas).
 
 Eiköhän aloiteta. Onnea matkaan! 👍
