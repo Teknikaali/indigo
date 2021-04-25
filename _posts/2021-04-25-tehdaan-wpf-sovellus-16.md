@@ -42,7 +42,6 @@ Tekemillämme muutoksilla ei ole vielä mitään vaikutusta sovelluksen ulkoasuu
 
 {% include note.html content='Voit myös antaa CornerRadiukselle arvon neljällä luvulla. Tällöin pystyt määrittämään tarkasti jokaiselle kulmalle pyöristysmäärän erikseen. Esim. Value="8,8,3,3".' %}
 
-
 ```xml
 <Style TargetType="Border">
     <Setter Property="Background" Value="#111428" />
@@ -71,6 +70,8 @@ Annetaan tyylille `x:Key`-attribuutilla nimi, johon voimme sitten viitata toisaa
 <figcaption>App.xaml - Lisätään Border-tyylille eksplisiittinen nimi.</figcaption>
 
 `MainWindow.xaml`-puolella voimme viitata tyyliin antamalla elementin `Style`-attribuutille viittauksen juuri lisäämäämme nimeen `StaticResource`-tyyppisellä bindauksella:
+
+{% include note.html content='En ole aiemmin puhunut paljon mitään WPF:n bindauksista, vaikka ne ovatkin erittäin tärkeä osa WPF:llä tekemistä. Palaamme näihin myöhemmin. Jos haluat jo tässä vaiheessa tietää enemmän, niin [tästä](https://www.wpf-tutorial.com/data-binding/introduction/) on hyvä aloittaa.' %}
 
 ```xml
 <!--  WEIGHT  -->
