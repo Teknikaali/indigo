@@ -113,14 +113,7 @@ Tekemämme tyylittely on toisaalta edistystä, mutta toisaalta taas ei. Niin hul
 
 Jos käynnistät ohjelman ja koitat syöttää arvoja, niin ohjelma ei mitenkään avita käyttäjäänsä "kohdistamaan" toimiaan arvojen syötekenttiin. Aiemmin kenttien ympärillä oli selkeät rajat, jotka ehkä hieman ohjasivat käyttäjää oikealle raiteelle.
 
-Voisimme ratkaista ongelman muutamallakin eri tavalla:
-1. Lisäämällä Hover-efektin, kun kursori on elementin päällä
-2. Lisäämällä pienen tietolaatikon (`ToolTip`), kun kursori on elementin päällä
-3. Lisäämällä jonkinlaiset reunat elementille
-
-Valitaan näistä yllättäen sekä ensimmäinen että toinen vaihtoehto. Kolmas rikkoisi sovelluksemme tyylin, joten yritetään selvitä ilman sitä.
-
-Tehdään nämä lisäykset seuraavassa osassa.
+Pohditaan ja ratkaistaan seuraavassa osassa miten korjaisimme tämän.
 
 [1]: /assets/images/tehdaan-wpf-sovellus/16-01.jpg
 [2]: /assets/images/tehdaan-wpf-sovellus/16-02.jpg
