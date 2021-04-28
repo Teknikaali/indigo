@@ -111,7 +111,7 @@ defaults:
       # can be overridden in the front matter for a specific post
       hidden: false
       # OpenGraph default image
-      image: assets/images/keeb-refresh.jpg
+      image: assets/images/index-header.jpg
 
 plugins:
   - jekyll-seo-tag
