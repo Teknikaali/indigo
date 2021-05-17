@@ -21,7 +21,15 @@ Tässä luotua sovellusta voidaan käyttää hyvänä pohjana jatkokehitykselle 
 Olen yrittänyt pitää asiat mahdollisimman yksinkertaisella tasolla ja selittää vastaan tulevat uudet konseptit korkealla tasolla paneutumatta niihin liian syvällisesti.
 
 Teen sen olettamuksen, että olet ehkä kokeillut jo jotain ohjelmointiin liittyvää ja hallitset tietokoneen käytön.
+
 Parhaan kokemuksen saat, kun teet itse mukana (tekemällä oppii), mutta voit myös halutessasi lukea tämän läpi ja soveltaa oppimaasi myöhemmin!
+
+## _Edit: Katsaus tulevaisuuteen_
+
+Tämä blogisarja on edennyt jo niin pitkälle, että voin tähän heti alkuun näyttää "teaserina" miltä sovellus tulee näyttämään n. 20 osan päästä:
+
+![][3]{: .center-image }
+<figcaption class="caption">Teaseri tulevasta.</figcaption>
 
 ## WPF - Windows Presentation Framework
 
@@ -92,3 +100,4 @@ Pääset siirtymään vaiheiden välillä alapuolella olevista linkeistä 👇
 
 [1]: /assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
 [2]: /assets/images/tehdaan-wpf-sovellus/01-01.png
+[3]: /assets/images/tehdaan-wpf-sovellus/19-02.jpg
