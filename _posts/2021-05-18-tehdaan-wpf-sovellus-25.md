@@ -1,6 +1,6 @@
 ---
 title: "Tehdään WPF-sovellus - 25 - Navigoinnin toteutus"
-image: assets/images/tehdaan-wpf-sovellus/ketuttaako-header.jpg
+image: assets/images/tehdaan-wpf-sovellus/25-header.jpg
 layout: post
 date: 2021-05-18 20:00
 tag:
