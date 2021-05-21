@@ -6,7 +6,10 @@
     </div>
 
     <div class="toright">
-        <h4 class="name">{{ site.authors[page.author].name }}</h4>
+        <a class="link" data-title="linkedin.com/in/{{ site.linkedin }}"
+            href="https://www.linkedin.com/in/{{ site.linkedin }}" target="_blank">
+            <h4 class="name">{{ site.authors[page.author].name }}</h4>
+        </a>
         <p class="bio">{{ site.authors[page.author].bio }}</p>
 
         <div class="share">
