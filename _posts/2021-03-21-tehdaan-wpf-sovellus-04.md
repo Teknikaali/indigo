@@ -10,6 +10,8 @@ author: anssikettunen
 description: Opas kuinka tehdä Windows-työpöytäsovellus käyttäen WPF, XAML ja C#.
 ---
 
+![][3]
+
 ## Ongelma: Vain toinen tekstilaatikoista näkyy
 
 Meidän täytyy määritellä `Grid` tarkemmin, jotta elementit eivät kasaantuisi sen sisällä päällekkäin.
@@ -88,3 +90,4 @@ Selkeytetään sovelluksen asettelua seuraavaksi.
 
 [1]: /assets/images/tehdaan-wpf-sovellus/04-01.png
 [2]: /assets/images/tehdaan-wpf-sovellus/04-02.png
+[3]: /assets/images/tehdaan-wpf-sovellus/04-header.jpg

@@ -10,6 +10,8 @@ author: anssikettunen
 description: Opas kuinka tehdä Windows-työpöytäsovellus käyttäen WPF, XAML ja C#. Tässä osassa muutetaan sovellus mukailemaan MVVM-tyyliä.
 ---
 
+![][4]
+
 ## Navigointi tapahtuu ViewModelia vaihtamalla
 
 Olemme aiemmin lisänneet päänäkymälle ResultView-näkymän omana elementtinään. Haluamme kuitenkin vaihtaa tätä näkymää aina, kun alareunan painiketta painetaan. Eli tarvitsemme tähän jonkin hieman dynaamisemman vaihtoehdon.
@@ -196,3 +198,4 @@ Tässä voisi olla hyvää tekemistä seuraavalle osalle!
 [1]: /assets/images/tehdaan-wpf-sovellus/25-01.jpg
 [2]: /assets/images/tehdaan-wpf-sovellus/25-02.jpg
 [3]: /assets/images/tehdaan-wpf-sovellus/25-03.jpg
+[4]: /assets/images/tehdaan-wpf-sovellus/25-header.jpg

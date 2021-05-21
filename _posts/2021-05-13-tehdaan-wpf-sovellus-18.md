@@ -10,6 +10,8 @@ author: anssikettunen
 description: Opas kuinka tehdä Windows-työpöytäsovellus käyttäen WPF, XAML ja C#. Tässä osassa muutetaan sovellus mukailemaan MVVM-tyyliä.
 ---
 
+![][2]
+
 ## MVVM on WPF-sovelluksen sydän
 
 Sovelluksemme toimii virheittä, näyttää hyvältä ja saamme laskettua painoindeksimme sillä. Siistiä! Silti mieltäni kalvaa jokin tämän suhteen..
@@ -73,3 +75,4 @@ Vai onk̴͎̾ó̵̱ j̵̛̳̩̦̲͌̎͛o̶̧̲̭̗̓ l̴̝̀͑̈́̏͊̉̋͛̔̌�
 Seuraavassa osassa lisätään selkärankaa sovelluksellemme aloittamalla tämän nelikirjaimisen hirviön toteuttaminen.
 
 [1]: /assets/images/tehdaan-wpf-sovellus/18-01.jpg
+[2]: /assets/images/tehdaan-wpf-sovellus/18-header.jpg

@@ -10,6 +10,8 @@ author: anssikettunen
 description: Opas kuinka tehdä Windows-työpöytäsovellus käyttäen WPF, XAML ja C#.
 ---
 
+![][2]
+
 ## Otsikon muuttaminen
 
 Keskitytään ensiksi saamaan ohjelman toiminnallisuudet valmiiksi ja sitten voimme hienosäätää ulkoasua selkeämmäksi. Alussa ohjelma tulee näyttämään hyvin alkukantaiselta, mutta suljetaan siltä silmämme ja keskitytään saamaan jotain oikeasti toimivaa aikaiseksi ensiksi. Tyylitellään käyttöliittymästä täysin juhlakelpoinen tapaus joskus myöhemmin (™).
@@ -68,3 +70,4 @@ Käynnistä ohjelma ja ihaile loistavaa tuotost.. hetkinen. Vain toinen syöteke
 Korjataan syötekenttien näkyvyys seuraavaksi.
 
 [1]: /assets/images/tehdaan-wpf-sovellus/03-01.png
+[2]: /assets/images/tehdaan-wpf-sovellus/03-header.jpg

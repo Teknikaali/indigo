@@ -10,6 +10,8 @@ author: anssikettunen
 description: Opas kuinka tehdä Windows-työpöytäsovellus käyttäen WPF, XAML ja C#.
 ---
 
+![][4]
+
 ## Luodaan uusi projekti
 
 Visual Studion käynnistyttyä sinua tervehtii ikkuna, jolla voit valita sovelluksen projektille tyypin. Olemme luomassa uutta `WPF(.NET)`-työpöytäsovellusta, joten tehdään näin:
@@ -119,3 +121,4 @@ Aloitetaan varsinaisen sovelluksen käyttöliittymän tekeminen seuraavaksi.
 [1]: /assets/images/tehdaan-wpf-sovellus/02-01.png
 [2]: /assets/images/tehdaan-wpf-sovellus/02-02.png
 [3]: /assets/images/tehdaan-wpf-sovellus/02-03.png
+[4]: /assets/images/tehdaan-wpf-sovellus/02-header.jpg
