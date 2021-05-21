@@ -94,7 +94,7 @@ public DelegateCommand(Action<object> execute, Predicate<object> canExecute)
 
 Emme ole siis hyödyntäneet tässä samaa strategiaa kuin `SetProperty<T>`-funktion kanssa.
 
-{% include note.html content='Voit tässä kohtaa harjoitella `DelegateCommandin` muuttamista geneeriseksi luokaksi, joka käyttää hyödykseen `<T>`-genericsejä. Valmiita toteutuksiakin varmasti löytyy.' %}
+{% include note.html content='Voit tässä kohtaa harjoitella `DelegateCommandin` muuttamista geneeriseksi luokaksi. Valmiita toteutuksia löytyy [myös](https://stackoverflow.com/questions/6273002/generic-type-safe-icommand-implementation).' %}
 
 Lisätään seuraava logiikka näkymän muuttamiseksi `execute`-lambdaamme hyödyntäen [`is`-avainsanaa](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/is):
 
