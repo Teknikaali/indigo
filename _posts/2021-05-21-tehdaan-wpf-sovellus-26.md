@@ -101,7 +101,7 @@ Lisätään seuraava logiikka näkymän muuttamiseksi `execute`-lambdaamme hyöd
 ```csharp
 x =>
 {
-    if (x is InputViewModel inputViewModel)
+    if (x is InputViewModel input)
     {
         CurrentViewModel = _resultViewModel;
     }
