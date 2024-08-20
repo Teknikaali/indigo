@@ -60,7 +60,7 @@ Päätetään tässä vaiheessa, että teemme sovellusta _ihmisten_ painoindeksi
 
 Voimme tehdä saman rajoituksen myös pituudelle, sillä kirjoitushetkellä pisin ihminen ei ole vielä ylittänyt 300 cm lukemaa.
 
-{% include note.html content='[Lista pisimmistä ihmisistä.](https://en.wikipedia.org/wiki/List_of_heaviest_people).' %}
+{% include note.html content='[Lista pisimmistä ihmisistä.](https://en.wikipedia.org/wiki/List_of_tallest_people).' %}
 
 Sivuhuomiona pensasnorsu voi painaa yli 10 000 kg ja kirahvi voi olla korkeudeltaan yli 600 cm. Valitettavasti joudumme jättämään nämä eläinkunnan edustajat sovelluksemme toiminnan ulkopuolelle. Ei mulla muuta. Jatketaan.
 
